@@ -29,23 +29,32 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;           /* ← No scroll on body */
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--background-root);
       color: var(--text);
-      line-height: 1.6;
     }
 
     main {
-      min-height: 100vh;
-      padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-3xl);
+      height: 100vh;                /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Spread content top to bottom */
+      padding: var(--spacing-lg) var(--spacing-xl);
       max-width: 900px;
       margin: 0 auto;
     }
 
     .wrapper {
-      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;      /* Center vertically */
+      align-items: center;
     }
 
     .loading {
@@ -86,6 +95,8 @@
     }
 
     .content {
+      width: 100%;
+      text-align: center;
       opacity: 0;
       transition: opacity 0.8s ease;
     }
@@ -106,7 +117,6 @@
     h1 {
       font-size: 2.8rem;
       font-weight: 700;
-      text-align: center;
       margin: 0 0 var(--spacing-sm);
       color: var(--text);
     }
@@ -114,27 +124,29 @@
     .subtitle {
       font-size: 1.25rem;
       color: var(--text-secondary);
-      text-align: center;
       margin: 0 0 var(--spacing-xl);
     }
 
     .divider {
       height: 1px;
       background: var(--border);
-      margin: var(--spacing-3xl) auto;
+      margin: var(--spacing-xl) auto;
       max-width: 120px;
     }
 
     .steps-container {
       display: grid;
-      gap: var(--spacing-3xl);
+      gap: var(--spacing-xl);
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .step {
       background: var(--background-default);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: var(--spacing-xl);
+      padding: var(--spacing-lg);
       box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
@@ -142,6 +154,7 @@
       display: flex;
       align-items: center;
       margin-bottom: var(--spacing-md);
+      justify-content: center;
     }
 
     .step-number {
@@ -203,11 +216,10 @@
 
     footer {
       text-align: center;
-      padding: var(--spacing-xl) 0;
+      padding: var(--spacing-lg) 0 var(--spacing-xl);
       color: var(--text-secondary);
       font-size: 0.95rem;
       border-top: 1px solid var(--border);
-      margin-top: var(--spacing-3xl);
     }
 
     footer a {
@@ -222,7 +234,7 @@
 
     @media (max-width: 600px) {
       main {
-        padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-3xl);
+        padding: var(--spacing-lg) var(--spacing-lg);
       }
       h1 {
         font-size: 2.4rem;
@@ -231,6 +243,16 @@
         width: 100px;
         height: 100px;
       }
+      .step {
+        padding: var(--spacing-md);
+      }
+    }
+
+    @media (max-height: 700px) {
+      .app-icon { width: 90px; height: 90px; }
+      h1 { font-size: 2.2rem; }
+      .subtitle { font-size: 1.1rem; }
+      .step-title { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -257,7 +279,7 @@
             <p class="step-description">
               Expo Go is a free app to test mobile apps
             </p>
-            <div class="store-buttons" id="store-buttons">
+            <div class="store-buttons">
               <a
                 id="app-store-btn"
                 href="https://apps.apple.com/app/id982107779"
@@ -282,19 +304,6 @@
               </a>
             </div>
           </div>
-
-          <!-- Uncomment if you want to add QR code section later -->
-          <!--
-          <div class="step qr-section">
-            <div class="step-header">
-              <div class="step-number">2</div>
-              <h2 class="step-title">Scan QR Code</h2>
-            </div>
-            <p class="step-description">Use your phone's camera or Expo Go</p>
-            <div class="qr-code" id="qr-code"></div>
-            <a href="exps://EXPS_URL_PLACEHOLDER" class="open-button">Open in Expo Go</a>
-          </div>
-          -->
         </div>
       </div>
     </div>
@@ -308,7 +317,6 @@
   </footer>
 
   <script>
-    // Simple script to hide loading and show content (you can expand this later)
     window.addEventListener('load', () => {
       const loading = document.getElementById('loading');
       const content = document.getElementById('content');
