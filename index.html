@@ -227,15 +227,24 @@
       font-size: 0.95rem;
     }
 
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-md);          /* 16px between links */
+      margin-bottom: var(--spacing-sm);
+    }
+
     .footer-links a {
-      color: var(--link);
+      color: var(--text-secondary);
       text-decoration: none;
-      margin: 0 var(--spacing-md);
+      font-size: 0.95rem;
+      transition: color 0.2s;
     }
 
     .footer-links a:hover {
-      text-decoration: underline;
       color: var(--text);
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -312,8 +321,10 @@
 
     <footer>
       <div class="footer-links">
+        <a href="about.html">About</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support@quietlight.app">Support</a>
       </div>
     </footer>
   </div>

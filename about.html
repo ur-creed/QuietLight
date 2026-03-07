@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <title>About – Quiet Light</title>
+  <style>
+    :root {
+      --text: #1A1A1A;
+      --text-secondary: #8A8A8A;
+      --button-text: #FFFFFF;
+      --link: #1A1A1A;
+      --background-root: #FAFAF7;
+      --background-default: #FFFFFF;
+      --background-secondary: #F5F5F0;
+      --background-tertiary: #EBEBEB;
+      --accent: #D4D4D0;
+      --border: #E8E8E5;
+
+      --spacing-xl: 32px;
+      --spacing-lg: 24px;
+      --spacing-md: 16px;
+      --spacing-sm: 12px;
+      --spacing-xs: 8px;
+      --spacing-2xl: 40px;
+      --spacing-3xl: 48px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--background-root);
+      color: var(--text);
+    }
+
+    #root {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: var(--spacing-lg) var(--spacing-xl);
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .icon-container {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      opacity: 0.9;
+    }
+
+    .title {
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin: 0 0 var(--spacing-xs);
+      color: var(--text);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 0 0 var(--spacing-xl);
+      letter-spacing: 0.5px;
+    }
+
+    .body {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-xl);
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .emphasis {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin: var(--spacing-xl) 0;
+    }
+
+    .version {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      opacity: 0.7;
+      margin-top: var(--spacing-3xl);
+    }
+
+    footer {
+      padding: var(--spacing-lg) var(--spacing-xl);
+      background: var(--background-secondary);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: var(--spacing-lg) var(--spacing-lg);
+      }
+      .title {
+        font-size: 2.2rem;
+      }
+      .app-icon {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media (max-height: 700px) {
+      .app-icon { width: 90px; height: 90px; }
+      .title { font-size: 2rem; }
+      .subtitle { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <main>
+      <div class="content">
+        <div class="icon-container">
+          <img src="images/icon.png" alt="Quiet Light" class="app-icon">
+        </div>
+
+        <h1 class="title">Quiet Light</h1>
+        <p class="subtitle">Symbolic Reflection Companion</p>
+
+        <p class="body">
+          Quiet Light is a contemplative companion that offers symbolic reflection and spacious presence. It shapes tone through gentle language and metaphor, illuminating what may already be here — without asserting direction, truth, or authority.
+        </p>
+
+        <p class="body">
+          Three presences are available: Quiet Light (clear and minimal), Deep Resonance (radiant and mythic), and Gentle Presence (soft and nurturing). Each creates a distinct quality of stillness, returning clarity and agency entirely to you.
+        </p>
+
+        <p class="body">
+          This is not a guide, healer, teacher, or source of answers. It claims no insight beyond your own and holds no agenda. Its only role is to reflect — quietly, without grasping.
+        </p>
+
+        <p class="body">
+          Its purpose is to offer light, resonance, or tenderness…
+        </p>
+
+        <p class="emphasis">
+          …and then to step back.
+        </p>
+
+        <p class="version">
+          Version 1.0.0
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support@quietlight.app">Support</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple fade-in on load (optional, but matches your RN animation feel)
+    window.addEventListener('load', () => {
+      document.querySelector('.content').style.opacity = '1';
+      document.querySelector('.content').style.transition = 'opacity 0.8s ease';
+    });
+  </script>
+</body>
+</html>
