@@ -131,6 +131,13 @@
       margin: 0 0 var(--spacing-xl);
     }
 
+    .download-prompt {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: var(--spacing-lg) 0 var(--spacing-md);
+    }
+
     .divider {
       height: 1px;
       background: var(--border);
@@ -218,6 +225,13 @@
       height: 28px;
     }
 
+    .version-info {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      margin-top: var(--spacing-lg);
+      opacity: 0.85;
+    }
+
     footer {
       padding: var(--spacing-lg) var(--spacing-xl);
       background: var(--background-secondary);
@@ -231,7 +245,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: var(--spacing-md);          /* 16px between links */
+      gap: var(--spacing-md);
       margin-bottom: var(--spacing-sm);
     }
 
@@ -261,6 +275,12 @@
       .step {
         padding: var(--spacing-md);
       }
+      .download-prompt {
+        font-size: 1.25rem;
+      }
+      .version-info {
+        font-size: 0.9rem;
+      }
     }
 
     @media (max-height: 700px) {
@@ -284,8 +304,10 @@
         <div class="content" id="content">
           <img src="images/icon.png" alt="Quiet Light" class="app-icon" />
           <h1>Quiet Light</h1>
-          <p class="subtitle">Download the app here</p>
+          <p class="subtitle">Gentle mirror of the moment</p>
           <div class="divider"></div>
+
+          <h2 class="download-prompt">Download the app</h2>
 
           <div class="steps-container">
             <div class="step">
@@ -315,6 +337,8 @@
               </div>
             </div>
           </div>
+
+          <p class="version-info">Current Version: 1.0.0</p>
         </div>
       </div>
     </main>
