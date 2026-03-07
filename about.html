@@ -110,13 +110,6 @@
       margin: var(--spacing-xl) 0;
     }
 
-    .version {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      opacity: 0.7;
-      margin-top: var(--spacing-3xl);
-    }
-
     footer {
       padding: var(--spacing-lg) var(--spacing-xl);
       background: var(--background-secondary);
@@ -213,7 +206,7 @@
   </div>
 
   <script>
-    // Simple fade-in on load (optional, but matches your RN animation feel)
+    // Simple fade-in on load
     window.addEventListener('load', () => {
       document.querySelector('.content').style.opacity = '1';
       document.querySelector('.content').style.transition = 'opacity 0.8s ease';
