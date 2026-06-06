@@ -187,24 +187,18 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    .store-button {
+    /* Google Play Section */
+    .google-play-container {
       position: relative;
       width: 246px;
       height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #000;
-      color: white;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      overflow: hidden;
-      transition: all 0.2s ease;
+      display: inline-block;
     }
-    .store-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    .google-play-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
     .coming-soon-badge {
       position: absolute;
@@ -212,9 +206,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(250, 250, 247, 0.75);   /* More transparent */
+      background: rgba(250, 250, 247, 0.75);
       backdrop-filter: blur(1px);
       z-index: 10;
+      border-radius: 12px;
     }
     .coming-soon-text {
       font-size: 1.05rem;
@@ -257,7 +252,8 @@
       .subtitle { font-size: 1.15rem; }
       .app-icon { width: 108px; height: 108px; }
       .qr-code-container img { width: 120px; height: 120px; }
-      .store-button, .app-store-link img { width: 220px; height: 74px; }
+      .app-store-link img,
+      .google-play-container { width: 220px; height: 74px; }
     }
   </style>
 </head>
@@ -281,10 +277,10 @@
           
           <div class="store-buttons">
             <div class="download-section">
-              <!-- Official Apple Badge -->
+              <!-- Official Apple Badge - SVG -->
               <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902" 
                  class="app-store-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000" 
+                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg" 
                      alt="Download on the App Store" />
               </a>
               
@@ -297,9 +293,10 @@
               </div>
             </div>
             
-            <!-- Google Play -->
-            <div class="store-button">
-              Google Play
+            <!-- Google Play with SVG -->
+            <div class="google-play-container">
+              <img src="images/GooglePlayBadge.svg" 
+                   alt="Get it on Google Play" />
               <div class="coming-soon-badge">
                 <div class="coming-soon-text">Coming Soon</div>
               </div>
