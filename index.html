@@ -91,29 +91,32 @@
       position: relative;
     }
 
-    /* X Social Icon - Upper Right Corner */
-    .x-corner-icon {
+    /* Social Icons - Top Right Corner */
+    .social-corner {
       position: absolute;
       top: 24px;
       right: 24px;
+      display: flex;
+      gap: 16px;
       z-index: 100;
+    }
+    .social-icon {
       color: var(--text-secondary);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .x-corner-icon:hover {
+    .social-icon:hover {
       color: var(--text);
       transform: scale(1.15) rotate(8deg);
       filter: drop-shadow(0 4px 8px rgba(26, 26, 26, 0.15));
     }
-    .x-corner-icon svg {
+    .social-icon svg {
       width: 28px;
       height: 28px;
     }
 
-    /* Rest of your styles */
+    /* Rest of styles */
     .wrapper { max-width: 620px; width: 100%; }
  
-    /* Loading Spinner */
     .loading {
       position: fixed;
       inset: 0;
@@ -273,11 +276,12 @@
     .footer-links a:hover { color: var(--text); }
 
     @media (max-width: 640px) {
-      .x-corner-icon {
+      .social-corner {
         top: 18px;
         right: 18px;
+        gap: 14px;
       }
-      .x-corner-icon svg {
+      .social-icon svg {
         width: 24px;
         height: 24px;
       }
@@ -294,16 +298,32 @@
   <div id="root">
     <main>
       <div class="wrapper">
-        <!-- X Icon - Upper Right -->
-        <a href="https://x.com/QuietLightApp" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="x-corner-icon"
-           aria-label="Follow Quiet Light on X">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25l-7.451 8.502L4.5 2.25H1.5l7.13 8.13L1.5 21.75h3l7.13-8.13L18.75 21.75h3l-7.13-8.13L21.75 2.25h-3.506z"/>
-          </svg>
-        </a>
+        <!-- Social Icons - Top Right -->
+        <div class="social-corner">
+          <!-- X / Twitter -->
+          <a href="https://x.com/QuietLightApp" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="social-icon"
+             aria-label="Follow on X">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25l-7.451 8.502L4.5 2.25H1.5l7.13 8.13L1.5 21.75h3l7.13-8.13L18.75 21.75h3l-7.13-8.13L21.75 2.25h-3.506z"/>
+            </svg>
+          </a>
+          
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/quietlightapp/" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="social-icon"
+             aria-label="Follow on Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.204-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.849.07-3.204 0-3.584-.012-4.849-.07-3.23-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.07 3.118.346.676 2.79.4 6.735.345 8.015.333 8.423.333 12c0 3.577.012 3.985.067 5.265.276 3.945 2.718 6.389 6.653 6.665 1.28.057 1.688.069 4.948.069 3.259 0 3.668-.013 4.948-.069 3.935-.276 6.377-2.72 6.653-6.665.054-1.28.066-1.688.066-5.265 0-3.577-.012-3.985-.066-5.265-.276-3.945-2.718-6.389-6.653-6.665C15.667.014 15.259 0 12 0z"/>
+              <circle cx="12" cy="12" r="3.5"/>
+              <circle cx="17.5" cy="6.5" r="1.5"/>
+            </svg>
+          </a>
+        </div>
 
         <!-- Loading Spinner -->
         <div class="loading" id="loading">
