@@ -23,6 +23,7 @@
   <meta property="og:site_name" content="Quiet Light" />
  
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@QuietLightApp" />
   <meta name="twitter:title" content="Quiet Light - AI Companion for Mindfulness" />
   <meta name="twitter:description" content="Your AI companion for mindfulness and meditation. Download now on iOS and Android." />
   <meta name="twitter:image" content="https://quietlight.app/images/icon.png" />
@@ -89,7 +90,7 @@
       text-align: center;
     }
     .wrapper { max-width: 620px; width: 100%; }
-
+ 
     /* Loading Spinner */
     .loading {
       position: fixed;
@@ -122,7 +123,7 @@
       font-size: 1.1rem;
       color: var(--text-secondary);
     }
-
+ 
     .app-icon {
       width: 128px;
       height: 128px;
@@ -187,7 +188,6 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
     }
-    /* Google Play Section */
     .google-play-container {
       position: relative;
       width: 246px;
@@ -227,6 +227,8 @@
       color: var(--text-secondary);
       font-size: 0.95rem;
     }
+ 
+    /* Footer */
     footer {
       padding: var(--spacing-md) var(--spacing-lg);
       background: var(--background-secondary);
@@ -240,13 +242,28 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: var(--spacing-md);
+      align-items: center;
     }
     .footer-links a {
       color: var(--text-secondary);
       text-decoration: none;
+      transition: color 0.2s ease;
     }
     .footer-links a:hover { color: var(--text); }
-
+ 
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-1px);
+      color: var(--text);
+    }
+ 
     @media (max-width: 640px) {
       h1 { font-size: 2.4rem; }
       .subtitle { font-size: 1.15rem; }
@@ -266,63 +283,70 @@
           <div class="spinner" aria-hidden="true"></div>
           <div class="loading-text">Loading with peace...</div>
         </div>
-
+ 
         <!-- Main Content -->
         <div class="content" id="content" style="opacity: 0; transition: opacity 0.8s ease;">
           <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
           <h1>Quiet Light</h1>
           <p class="subtitle">AI companion for mindfulness and meditation</p>
-          
+         
           <h2 class="download-prompt">Download the app</h2>
-          
+         
           <div class="store-buttons">
             <div class="download-section">
               <!-- Official Apple Badge - SVG -->
-              <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902" 
+              <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902"
                  class="app-store-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg" 
+                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg"
                      alt="Download on the App Store" />
               </a>
-              
+             
               <!-- QR Code -->
               <div class="qr-code-container">
-                <img src="images/qr-code.png" 
+                <img src="images/qr-code.png"
                      alt="QR Code - Scan to download Quiet Light on the App Store"
                      width="148" height="148" />
                 <div class="qr-label">Scan to download</div>
               </div>
             </div>
-            
+           
             <!-- Google Play with SVG -->
             <div class="google-play-container">
-              <img src="images/GooglePlayBadge.svg" 
+              <img src="images/GooglePlayBadge.svg"
                    alt="Get it on Google Play" />
               <div class="coming-soon-badge">
                 <div class="coming-soon-text">Coming Soon</div>
               </div>
             </div>
           </div>
-          
+         
           <p class="version-info">Current Version: 1.0.0</p>
         </div>
       </div>
     </main>
-    
+   
     <footer>
       <nav class="footer-links">
         <a href="about.html">About</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="mailto:support@quietlight.app">Support</a>
+ 
+        <!-- X / Twitter Link -->
+        <a href="https://x.com/QuietLightApp" target="_blank" rel="noopener noreferrer" aria-label="Follow Quiet Light on X">
+          <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25l-7.451 8.502L4.5 2.25H1.5l7.13 8.13L1.5 21.75h3l7.13-8.13L18.75 21.75h3l-7.13-8.13L21.75 2.25h-3.506z"/>
+          </svg>
+        </a>
       </nav>
     </footer>
   </div>
-
+ 
   <script>
     window.addEventListener('load', () => {
       const loading = document.getElementById('loading');
       const content = document.getElementById('content');
-      
+     
       loading.classList.add('hidden');
       setTimeout(() => {
         content.style.opacity = '1';
