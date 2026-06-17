@@ -252,7 +252,140 @@
       color: var(--text-secondary);
       font-size: 0.95rem;
     }
- 
+    .whats-new-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      font-family: inherit;
+      color: var(--text);
+      background: var(--background-default);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .whats-new-btn:hover {
+      border-color: var(--text-secondary);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .whats-new-btn:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+    .whats-new-btn svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+    .whats-new-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-md);
+      background: rgba(26, 26, 26, 0.25);
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .whats-new-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .whats-new-modal {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: var(--spacing-lg);
+      background: var(--background-default);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      text-align: left;
+      transform: translateY(12px) scale(0.98);
+      transition: transform 0.3s ease;
+    }
+    .whats-new-overlay.open .whats-new-modal {
+      transform: translateY(0) scale(1);
+    }
+    .whats-new-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--text-secondary);
+      background: transparent;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: color 0.2s ease, background 0.2s ease;
+    }
+    .whats-new-close:hover {
+      color: var(--text);
+      background: var(--background-secondary);
+    }
+    .whats-new-close:focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 2px;
+    }
+    .whats-new-title {
+      margin: 0 48px 8px 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .whats-new-intro {
+      margin: 0 0 var(--spacing-md);
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .whats-new-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .whats-new-list li {
+      position: relative;
+      padding: 14px 0 14px 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--text);
+    }
+    .whats-new-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-secondary);
+    }
+    .whats-new-list strong {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
     footer {
       padding: var(--spacing-md) var(--spacing-lg);
       background: var(--background-secondary);
@@ -291,6 +424,12 @@
       .qr-code-container img { width: 120px; height: 120px; }
       .app-store-link img,
       .google-play-container { width: 220px; height: 74px; }
+      .whats-new-modal {
+        padding: var(--spacing-md);
+      }
+      .whats-new-title {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
@@ -365,6 +504,12 @@
           </div>
          
           <p class="version-info">Current Version: 1.1</p>
+          <button class="whats-new-btn" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+            </svg>
+            What's new in 1.1
+          </button>
         </div>
       </div>
     </main>
@@ -378,6 +523,33 @@
       </nav>
     </footer>
   </div>
+
+  <!-- What's New Modal -->
+  <div class="whats-new-overlay" id="whats-new-modal" role="dialog" aria-labelledby="whats-new-title" aria-modal="true" hidden>
+    <div class="whats-new-modal">
+      <button class="whats-new-close" id="whats-new-close" type="button" aria-label="Close">&times;</button>
+      <h2 class="whats-new-title" id="whats-new-title">What's new in 1.1</h2>
+      <p class="whats-new-intro">A few quiet additions to help reflection fit gently into your day:</p>
+      <ul class="whats-new-list">
+        <li>
+          <strong>Daily reminders</strong>
+          Set a gentle nudge to pause and reflect at a time that suits you.
+        </li>
+        <li>
+          <strong>Calm meter</strong>
+          See your reflections for the day at a glance, with a soft cue when it's a good moment to pause.
+        </li>
+        <li>
+          <strong>A kinder daily rhythm</strong>
+          When you've reflected enough for one day, you're met with a calm note that rest is part of the practice.
+        </li>
+        <li>
+          <strong>Small refinements</strong>
+          Throughout the app for a smoother, quieter experience.
+        </li>
+      </ul>
+    </div>
+  </div>
  
   <script>
     window.addEventListener('load', () => {
@@ -389,6 +561,46 @@
         content.style.opacity = '1';
       }, 400);
     });
+
+    (function () {
+      const btn = document.getElementById('whats-new-btn');
+      const modal = document.getElementById('whats-new-modal');
+      const closeBtn = document.getElementById('whats-new-close');
+      const modalPanel = modal.querySelector('.whats-new-modal');
+      let lastFocused = null;
+
+      function openModal() {
+        lastFocused = document.activeElement;
+        modal.hidden = false;
+        requestAnimationFrame(() => modal.classList.add('open'));
+        btn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          modal.hidden = true;
+          if (lastFocused) lastFocused.focus();
+        }, 300);
+      }
+
+      btn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.hidden) closeModal();
+      });
+
+      modalPanel.addEventListener('click', (e) => e.stopPropagation());
+    })();
   </script>
 </body>
 </html>
