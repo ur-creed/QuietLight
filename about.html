@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/site-loader.css">
   <title>About – Quiet Light</title>
   <style>
     :root {
@@ -113,42 +114,17 @@
       margin-top: var(--spacing-3xl);
     }
 
-    html.page-fit .icon-container {
-      margin-bottom: 6px;
-    }
-    html.page-fit .app-icon {
-      width: clamp(44px, 7vh, 64px);
-      height: clamp(44px, 7vh, 64px);
-    }
-    html.page-fit .title {
-      font-size: clamp(1.4rem, 3.5vh, 1.85rem);
-      margin-bottom: 2px;
-    }
-    html.page-fit .subtitle {
-      font-size: 0.88rem;
-      margin-bottom: 10px;
-    }
-    html.page-fit .body {
-      font-size: clamp(0.78rem, 1.75vh, 0.88rem);
-      line-height: 1.48;
-      margin-bottom: 8px;
-    }
-    html.page-fit .emphasis {
-      font-size: 0.9rem;
-      margin: 6px 0;
-    }
-    html.page-fit .version {
-      margin-top: 8px;
-      font-size: 0.78rem;
-    }
-
     @media (max-width: 600px) {
+      main {
+        padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-3xl);
+      }
       .title { font-size: 2.2rem; }
       .app-icon { width: 100px; height: 100px; }
     }
   </style>
 </head>
 <body>
+  <script src="js/site-loader.js"></script>
   <div id="root">
     <main>
       <div class="content">

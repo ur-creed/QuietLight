@@ -35,6 +35,7 @@
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <link rel="apple-touch-icon" href="/images/icon.png" />
   <link rel="stylesheet" href="css/site-nav.css">
+  <link rel="stylesheet" href="css/site-loader.css">
  
   <title>Quiet Light - AI Companion for Mindfulness & Meditation App</title>
  
@@ -87,46 +88,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: var(--spacing-lg) var(--spacing-md);
+      padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
       text-align: center;
       position: relative;
+      min-height: calc(100vh - var(--site-header-h) - 56px);
     }
 
     /* Rest of styles */
     .wrapper { max-width: 620px; width: 100%; }
  
-    .loading {
-      position: fixed;
-      inset: 0;
-      background: var(--background-root);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      transition: opacity 0.6s ease;
-    }
-    .loading.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .spinner {
-      width: 48px;
-      height: 48px;
-      border: 5px solid var(--border);
-      border-top: 5px solid var(--text);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: var(--spacing-md);
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    .loading-text {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-    }
-
     .app-icon {
       width: 128px;
       height: 128px;
@@ -448,69 +418,6 @@
       gap: 8px;
     }
 
-    html.page-fit .app-icon {
-      width: clamp(56px, 9vh, 80px);
-      height: clamp(56px, 9vh, 80px);
-      margin-bottom: 8px;
-      border-radius: 18px;
-    }
-    html.page-fit h1 {
-      font-size: clamp(1.65rem, 4.2vh, 2.2rem);
-      margin-bottom: 4px;
-    }
-    html.page-fit .subtitle {
-      font-size: clamp(0.9rem, 2vh, 1.05rem);
-      margin-bottom: 10px;
-    }
-    html.page-fit .download-prompt {
-      font-size: 0.95rem;
-      margin: 6px 0 8px;
-    }
-    html.page-fit .store-buttons {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 8px 14px;
-    }
-    html.page-fit .download-section {
-      flex-direction: row;
-      align-items: center;
-      gap: 8px;
-    }
-    html.page-fit .app-store-link img {
-      width: 150px;
-      height: 50px;
-    }
-    html.page-fit .qr-code-container {
-      padding: 5px;
-    }
-    html.page-fit .qr-code-container img {
-      width: 68px;
-      height: 68px;
-    }
-    html.page-fit .qr-label {
-      font-size: 0.62rem;
-      margin-top: 3px;
-    }
-    html.page-fit .google-play-container {
-      width: 150px;
-      height: 50px;
-    }
-    html.page-fit .version-row {
-      margin-top: 8px;
-      gap: 5px;
-    }
-    html.page-fit .version-info {
-      margin: 0;
-      font-size: 0.82rem;
-    }
-    html.page-fit .whats-new-btn {
-      margin-top: 0;
-      padding: 7px 14px;
-      font-size: 0.82rem;
-    }
-
     @media (max-width: 640px) {
       h1 { font-size: 2.4rem; }
       .subtitle { font-size: 1.15rem; }
@@ -528,17 +435,12 @@
   </style>
 </head>
 <body>
+  <script src="js/site-loader.js"></script>
   <div id="root">
     <main>
       <div class="wrapper">
-        <!-- Loading Spinner -->
-        <div class="loading" id="loading">
-          <div class="spinner" aria-hidden="true"></div>
-          <div class="loading-text">Loading with peace...</div>
-        </div>
- 
         <!-- Main Content -->
-        <div class="content" id="content" style="opacity: 0; transition: opacity 0.8s ease;">
+        <div class="content" id="content">
           <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
           <h1>Quiet Light</h1>
           <p class="subtitle">AI companion for mindfulness and meditation</p>
@@ -638,16 +540,6 @@
   </div>
  
   <script>
-    window.addEventListener('load', () => {
-      const loading = document.getElementById('loading');
-      const content = document.getElementById('content');
-     
-      loading.classList.add('hidden');
-      setTimeout(() => {
-        content.style.opacity = '1';
-      }, 400);
-    });
-
     (function () {
       const btn = document.getElementById('whats-new-btn');
       const modal = document.getElementById('whats-new-modal');

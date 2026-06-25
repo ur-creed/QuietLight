@@ -31,14 +31,6 @@
     return currentPage() === href;
   }
 
-  var scrollPages = ["privacy.html", "terms.html", "changelog.html"];
-  var pageMode =
-    scrollPages.indexOf(currentPage()) >= 0 ? "page-scroll" : "page-fit";
-  document.documentElement.classList.add(pageMode);
-  if (pageMode === "page-fit" && !document.getElementById("root")) {
-    document.body.classList.add("page-fit-direct");
-  }
-
   function buildNav(links, linkClass) {
     return links
       .map(function (link) {
@@ -108,16 +100,4 @@
   footer.className = "site-footer";
   footer.innerHTML =
     '<p class="site-footer-tagline">Stillness is already complete.</p>';
-
-  if (pageMode === "page-fit") {
-    window.addEventListener("load", function () {
-      var mainEl = document.querySelector("main");
-      if (mainEl && mainEl.scrollHeight > mainEl.clientHeight + 4) {
-        document.documentElement.classList.remove("page-fit");
-        document.documentElement.classList.add("page-scroll");
-        document.body.classList.remove("page-fit-direct");
-        mainEl.style.overflow = "visible";
-      }
-    });
-  }
 })();

@@ -7,6 +7,9 @@
 
 body.has-site-header {
   padding-top: var(--site-header-h);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
@@ -220,44 +223,14 @@ body.has-site-header {
   left: 16px;
 }
 
-/* ── Fit pages: no page scroll (home, about, pause, 404) ── */
-html.page-fit {
-  height: 100%;
-  overflow: hidden;
-}
-
-html.page-fit body {
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-html.page-fit #root,
-html.page-fit body.page-fit-direct {
+#root {
   flex: 1;
-  min-height: 0;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-html.page-fit main {
-  flex: 1;
   min-height: 0;
-  overflow: hidden;
-  padding: 10px 16px;
-  justify-content: center;
 }
 
-/* ── Scroll pages: privacy, terms, changelog ── */
-html.page-scroll body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-html.page-scroll main {
+body.has-site-header > main {
   flex: 1;
 }
 
