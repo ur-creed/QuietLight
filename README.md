@@ -44,12 +44,21 @@ Static landing page for [quietlight.app](https://quietlight.app) — hosted on G
 | [`privacy.html`](privacy.html) | Privacy policy |
 | [`terms.html`](terms.html) | Terms of service |
 | [`pause.html`](pause.html) | A quiet place to sit for a moment |
+| [`changelog.html`](changelog.html) | Version history — releases and trailing patches |
 
 App source lives separately at [quiet-light-illuminations](https://github.com/ur-creed/quiet-light-illuminations).
 
-## Current release
+## Changelog
 
-**v1.1.1** — Daily reflections, saved reflections, gentle reminders, and a quieter rhythm throughout.
+**Current: v1.1.1** (patch) · trailing **v1.1** (release)
+
+| Version | Type | Highlights |
+|---------|------|------------|
+| **1.1.1** | Patch | Saved reflections, shareable cards, About copy, stability |
+| **1.1** | Release | Daily reflections, reminders, calm meter, kinder rhythm |
+| **1.0** | Release | Initial App Store release — three presences, free & premium |
+
+[Full changelog →](changelog.html) · [CHANGELOG.md](CHANGELOG.md)
 
 <details>
 <summary><strong>What this is not</strong></summary>

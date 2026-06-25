@@ -385,6 +385,36 @@
       margin-bottom: 4px;
       font-weight: 600;
     }
+    .whats-new-footer {
+      margin-top: var(--spacing-md);
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+    .whats-new-footer a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .whats-new-footer a:hover {
+      border-bottom-color: var(--text);
+    }
+    .version-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      margin-left: 6px;
+      vertical-align: middle;
+      border-radius: 999px;
+      background: var(--background-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
 
     footer {
       padding: var(--spacing-md) var(--spacing-lg);
@@ -503,12 +533,12 @@
             </div>
           </div>
          
-          <p class="version-info">Current Version: 1.1</p>
+          <p class="version-info">Current Version: 1.1.1</p>
           <button class="whats-new-btn" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
             </svg>
-            What's new in 1.1
+            What's new in 1.1.1
           </button>
         </div>
       </div>
@@ -517,6 +547,7 @@
     <footer>
       <nav class="footer-links">
         <a href="about.html">About</a>
+        <a href="changelog.html">Changelog</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
         <a href="mailto:support@quietlight.app">Support</a>
@@ -528,26 +559,29 @@
   <div class="whats-new-overlay" id="whats-new-modal" role="dialog" aria-labelledby="whats-new-title" aria-modal="true" hidden>
     <div class="whats-new-modal">
       <button class="whats-new-close" id="whats-new-close" type="button" aria-label="Close">&times;</button>
-      <h2 class="whats-new-title" id="whats-new-title">What's new in 1.1</h2>
-      <p class="whats-new-intro">A few quiet additions to help reflection fit gently into your day:</p>
+      <h2 class="whats-new-title" id="whats-new-title">What's new in 1.1.1<span class="version-badge">Patch</span></h2>
+      <p class="whats-new-intro">Gentle refinements trailing the 1.1 reflection rhythm release:</p>
       <ul class="whats-new-list">
         <li>
-          <strong>Daily reminders</strong>
-          Set a gentle nudge to pause and reflect at a time that suits you.
+          <strong>Saved reflections</strong>
+          Save, browse, and revisit meaningful moments whenever you'd like to return.
         </li>
         <li>
-          <strong>Calm meter</strong>
-          See your reflections for the day at a glance, with a soft cue when it's a good moment to pause.
+          <strong>Shareable reflection cards</strong>
+          Export a reflection as a quiet, on-brand image to share or keep.
         </li>
         <li>
-          <strong>A kinder daily rhythm</strong>
-          When you've reflected enough for one day, you're met with a calm note that rest is part of the practice.
+          <strong>Updated About screen</strong>
+          Invitation-focused copy and Quiet Sun / Quiet Moon persona names.
         </li>
         <li>
-          <strong>Small refinements</strong>
-          Throughout the app for a smoother, quieter experience.
+          <strong>Stability &amp; polish</strong>
+          Expanded settings, smoother navigation, and quieter performance throughout.
         </li>
       </ul>
+      <p class="whats-new-footer">
+        Part of <strong>1.1 — Reflection rhythm</strong> · <a href="changelog.html">Full changelog</a>
+      </p>
     </div>
   </div>
  
