@@ -401,19 +401,66 @@
     .whats-new-footer a:hover {
       border-bottom-color: var(--text);
     }
-    .version-badge {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      margin-left: 6px;
-      vertical-align: middle;
-      border-radius: 999px;
-      background: var(--background-secondary);
+    .whats-new-latest {
+      font-size: 0.88rem;
       color: var(--text-secondary);
-      border: 1px solid var(--border);
+      margin: 0 0 var(--spacing-md);
+    }
+    .whats-new-also {
+      margin-top: var(--spacing-md);
+      border-top: 1px solid var(--border);
+    }
+    .whats-new-also summary {
+      padding: 14px 0;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .whats-new-also summary::-webkit-details-marker { display: none; }
+    .whats-new-also summary::after {
+      content: "+";
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      transition: transform 0.2s ease;
+    }
+    .whats-new-also[open] summary::after {
+      content: "−";
+    }
+    .whats-new-also-list {
+      margin: 0 0 8px;
+      padding: 0;
+      list-style: none;
+    }
+    .whats-new-also-list li {
+      position: relative;
+      padding: 10px 0 10px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+    .whats-new-also-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 17px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+    .whats-new-also-list strong {
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 600;
+      color: var(--text);
     }
 
     footer {
@@ -538,7 +585,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
             </svg>
-            What's new in 1.1.1
+            What's new
           </button>
         </div>
       </div>
@@ -559,8 +606,8 @@
   <div class="whats-new-overlay" id="whats-new-modal" role="dialog" aria-labelledby="whats-new-title" aria-modal="true" hidden>
     <div class="whats-new-modal">
       <button class="whats-new-close" id="whats-new-close" type="button" aria-label="Close">&times;</button>
-      <h2 class="whats-new-title" id="whats-new-title">What's new in 1.1.1<span class="version-badge">Patch</span></h2>
-      <p class="whats-new-intro">Gentle refinements trailing the 1.1 reflection rhythm release:</p>
+      <h2 class="whats-new-title" id="whats-new-title">What's new</h2>
+      <p class="whats-new-latest">Latest update · 1.1.1</p>
       <ul class="whats-new-list">
         <li>
           <strong>Saved reflections</strong>
@@ -579,8 +626,29 @@
           Expanded settings, smoother navigation, and quieter performance throughout.
         </li>
       </ul>
+      <details class="whats-new-also">
+        <summary>Also in 1.1 — Reflection rhythm</summary>
+        <ul class="whats-new-also-list">
+          <li>
+            <strong>Daily reflections</strong>
+            Three thoughtfully spaced reflections per day, each with its own prompt.
+          </li>
+          <li>
+            <strong>Daily reminders</strong>
+            A gentle nudge to pause and reflect at a time that suits you.
+          </li>
+          <li>
+            <strong>Calm meter</strong>
+            Your reflections for the day at a glance, with a soft cue when to pause.
+          </li>
+          <li>
+            <strong>A kinder daily rhythm</strong>
+            When you've reflected enough, a calm note that rest is part of the practice.
+          </li>
+        </ul>
+      </details>
       <p class="whats-new-footer">
-        Part of <strong>1.1 — Reflection rhythm</strong> · <a href="changelog.html">Full changelog</a>
+        <a href="changelog.html">Full changelog</a>
       </p>
     </div>
   </div>

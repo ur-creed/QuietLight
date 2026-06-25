@@ -50,13 +50,13 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 
 ## Changelog
 
-**Current: v1.1.1** (patch) · trailing **v1.1** (release)
+**Current: v1.1.1** — newest first on the site; 1.1 release story expandable from home.
 
-| Version | Type | Highlights |
-|---------|------|------------|
-| **1.1.1** | Patch | Saved reflections, shareable cards, About copy, stability |
-| **1.1** | Release | Daily reflections, reminders, calm meter, kinder rhythm |
-| **1.0** | Release | Initial App Store release — three presences, free & premium |
+| Version | Highlights |
+|---------|------------|
+| **1.1.1** (latest) | Saved reflections, shareable cards, About copy, stability |
+| **1.1** | Daily reflections, reminders, calm meter, kinder rhythm |
+| **1.0** | Initial App Store release — three presences, free & premium |
 
 [Full changelog →](changelog.html) · [CHANGELOG.md](CHANGELOG.md)
 

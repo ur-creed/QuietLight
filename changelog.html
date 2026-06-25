@@ -13,7 +13,6 @@
       --background-default: #FFFFFF;
       --background-secondary: #F5F5F0;
       --border: #E8E8E5;
-      --release-accent: #1A1A1A;
       --patch-accent: #B8B8B2;
     }
 
@@ -54,28 +53,18 @@
       text-align: center;
       color: var(--text-secondary);
       font-size: 1rem;
-      margin: 0 0 48px;
+      margin: 0 0 40px;
     }
 
-    .legend {
+    .timeline {
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px 24px;
-      justify-content: center;
-      margin-bottom: 40px;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-
-    .legend-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      flex-direction: column;
+      gap: 20px;
     }
 
     .badge {
       display: inline-block;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -83,45 +72,103 @@
       border-radius: 999px;
     }
 
-    .badge-release {
-      background: var(--release-accent);
+    .badge-latest {
+      background: var(--text);
       color: var(--background-root);
     }
 
-    .badge-patch {
+    .badge-release {
       background: var(--background-secondary);
-      color: var(--text-secondary);
+      color: var(--text);
       border: 1px solid var(--border);
     }
 
-    /* ── Release (minor / major) ── */
+    /* ── Latest update (compact, top) ── */
+    .latest {
+      padding: 22px 24px;
+      background: var(--background-default);
+      border: 1px solid var(--text);
+      border-radius: 14px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .latest-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 14px;
+      margin-bottom: 14px;
+    }
+
+    .latest-version {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .latest-date {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-left: auto;
+    }
+
+    .compact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .compact-list li {
+      padding: 8px 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    .compact-list li:first-child { border-top: none; padding-top: 0; }
+    .compact-list strong { color: var(--text); font-weight: 600; }
+
+    .parent-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .parent-link:hover {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+
+    /* ── Release cards ── */
     .release {
-      margin-bottom: 40px;
-      padding: 28px 28px 8px;
+      padding: 24px 24px 20px;
       background: var(--background-default);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      border-radius: 14px;
     }
 
     .release-header {
       display: flex;
       flex-wrap: wrap;
       align-items: baseline;
-      gap: 10px 16px;
-      margin-bottom: 8px;
+      gap: 10px 14px;
+      margin-bottom: 6px;
     }
 
     .release-version {
-      font-size: 1.65rem;
+      font-size: 1.45rem;
       font-weight: 700;
       margin: 0;
     }
 
     .release-name {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--text-secondary);
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       font-style: italic;
     }
 
@@ -133,8 +180,8 @@
 
     .release-intro {
       color: var(--text-secondary);
-      font-size: 0.98rem;
-      margin: 0 0 20px;
+      font-size: 0.95rem;
+      margin: 0 0 16px;
       line-height: 1.65;
     }
 
@@ -148,7 +195,7 @@
       position: relative;
       padding: 12px 0 12px 22px;
       border-top: 1px solid var(--border);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       line-height: 1.55;
     }
 
@@ -169,79 +216,63 @@
       font-weight: 600;
     }
 
-    /* ── Patches trail beneath their release ── */
-    .patches {
-      margin: 20px 0 8px;
-      padding: 16px 0 0 20px;
-      border-left: 2px solid var(--border);
-    }
-
-    .patches-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .patches-trail {
+      margin: 16px 0 0;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.85rem;
       color: var(--patch-accent);
-      margin: 0 0 12px;
     }
 
-    .patch {
-      margin-bottom: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px dashed var(--border);
-    }
-
-    .patch:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .patch-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 8px 12px;
-      margin-bottom: 10px;
-    }
-
-    .patch-version {
-      font-size: 0.95rem;
-      font-weight: 600;
+    .patches-trail a {
       color: var(--text-secondary);
-      margin: 0;
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
     }
 
-    .patch-date {
-      font-size: 0.8rem;
-      color: var(--patch-accent);
-    }
-
-    .patch-list {
-      margin: 0;
-      padding: 0 0 0 16px;
-      list-style: none;
-    }
-
-    .patch-list li {
-      position: relative;
-      padding: 4px 0 4px 14px;
-      font-size: 0.88rem;
-      line-height: 1.5;
-      color: var(--text-secondary);
-    }
-
-    .patch-list li::before {
-      content: "·";
-      position: absolute;
-      left: 0;
-      color: var(--patch-accent);
-    }
-
-    .patch-list strong {
+    .patches-trail a:hover {
       color: var(--text);
-      font-weight: 500;
+      border-bottom-color: var(--text);
     }
+
+    /* ── Older releases (collapsed) ── */
+    .older details {
+      background: var(--background-default);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .older summary {
+      padding: 18px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--text-secondary);
+    }
+
+    .older summary::-webkit-details-marker { display: none; }
+
+    .older summary::after {
+      content: "+";
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--patch-accent);
+    }
+
+    .older details[open] summary::after { content: "−"; }
+
+    .older .release-inner {
+      padding: 0 24px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .older .release-name { margin-top: 16px; }
 
     footer {
       padding: 20px 24px;
@@ -264,108 +295,100 @@
       text-decoration: none;
     }
 
-    .footer-links a:hover {
-      color: var(--text);
-    }
+    .footer-links a:hover { color: var(--text); }
 
     @media (max-width: 600px) {
-      .release { padding: 20px 18px 4px; }
-      .release-version { font-size: 1.4rem; }
-      .release-date { margin-left: 0; width: 100%; }
+      .latest-date, .release-date { margin-left: 0; width: 100%; }
     }
   </style>
 </head>
 <body>
   <main>
     <h1 class="page-title">Changelog</h1>
-    <p class="page-subtitle">Releases carry the larger shifts. Patches trail quietly beneath.</p>
+    <p class="page-subtitle">Newest first — releases and the quiet updates that follow.</p>
 
-    <div class="legend">
-      <span class="legend-item"><span class="badge badge-release">Release</span> New rhythm</span>
-      <span class="legend-item"><span class="badge badge-patch">Patch</span> Gentle refinements</span>
-    </div>
-
-    <!-- 1.1 release + trailing patches -->
-    <article class="release">
-      <div class="release-header">
-        <h2 class="release-version">1.1</h2>
-        <span class="badge badge-release">Release</span>
-        <span class="release-date">February 2026</span>
-      </div>
-      <p class="release-name">Reflection rhythm</p>
-      <p class="release-intro">
-        A few quiet additions to help reflection fit gently into your day — without pressure or prescribed outcomes.
-      </p>
-      <ul class="change-list">
-        <li>
-          <strong>Daily reflections</strong>
-          Three thoughtfully spaced reflections per day, each with its own prompt and presence.
-        </li>
-        <li>
-          <strong>Daily reminders</strong>
-          Set a gentle nudge to pause and reflect at a time that suits you.
-        </li>
-        <li>
-          <strong>Calm meter</strong>
-          See your reflections for the day at a glance, with a soft cue when it's a good moment to pause.
-        </li>
-        <li>
-          <strong>A kinder daily rhythm</strong>
-          When you've reflected enough for one day, you're met with a calm note that rest is part of the practice.
-        </li>
-      </ul>
-
-      <div class="patches">
-        <p class="patches-label">Patches</p>
-
-        <div class="patch">
-          <div class="patch-header">
-            <h3 class="patch-version">1.1.1</h3>
-            <span class="badge badge-patch">Patch</span>
-            <span class="patch-date">June 25, 2026</span>
-          </div>
-          <ul class="patch-list">
-            <li><strong>Saved reflections</strong> — save, browse, and revisit meaningful moments</li>
-            <li><strong>Shareable reflection cards</strong> — export reflections as quiet, on-brand images</li>
-            <li><strong>In-app rating prompt</strong> — thoughtful timing for App Store feedback</li>
-            <li><strong>About screen</strong> — updated copy; Quiet Sun &amp; Quiet Moon persona names</li>
-            <li><strong>Settings</strong> — expanded options and smoother navigation</li>
-            <li><strong>Stability</strong> — subscription tier resolution, storage improvements, dependency refresh</li>
-          </ul>
+    <div class="timeline">
+      <!-- Latest: 1.1.1 -->
+      <article class="latest" id="v1-1-1">
+        <div class="latest-header">
+          <h2 class="latest-version">1.1.1</h2>
+          <span class="badge badge-latest">Latest</span>
+          <span class="latest-date">June 25, 2026</span>
         </div>
-      </div>
-    </article>
+        <ul class="compact-list">
+          <li><strong>Saved reflections</strong> — save, browse, and revisit meaningful moments</li>
+          <li><strong>Shareable reflection cards</strong> — export reflections as quiet, on-brand images</li>
+          <li><strong>Updated About screen</strong> — invitation-focused copy; Quiet Sun &amp; Quiet Moon names</li>
+          <li><strong>Settings &amp; stability</strong> — expanded options, smoother navigation, performance polish</li>
+        </ul>
+        <a class="parent-link" href="#v1-1">Part of 1.1 — Reflection rhythm ↓</a>
+      </article>
 
-    <!-- 1.0 initial release -->
-    <article class="release">
-      <div class="release-header">
-        <h2 class="release-version">1.0</h2>
-        <span class="badge badge-release">Release</span>
-        <span class="release-date">January 2026</span>
+      <!-- Release: 1.1 -->
+      <article class="release" id="v1-1">
+        <div class="release-header">
+          <h2 class="release-version">1.1</h2>
+          <span class="badge badge-release">Release</span>
+          <span class="release-date">February 2026</span>
+        </div>
+        <p class="release-name">Reflection rhythm</p>
+        <p class="release-intro">
+          A few quiet additions to help reflection fit gently into your day — without pressure or prescribed outcomes.
+        </p>
+        <ul class="change-list">
+          <li>
+            <strong>Daily reflections</strong>
+            Three thoughtfully spaced reflections per day, each with its own prompt and presence.
+          </li>
+          <li>
+            <strong>Daily reminders</strong>
+            Set a gentle nudge to pause and reflect at a time that suits you.
+          </li>
+          <li>
+            <strong>Calm meter</strong>
+            See your reflections for the day at a glance, with a soft cue when it's a good moment to pause.
+          </li>
+          <li>
+            <strong>A kinder daily rhythm</strong>
+            When you've reflected enough for one day, you're met with a calm note that rest is part of the practice.
+          </li>
+        </ul>
+        <p class="patches-trail">
+          Updates since: <a href="#v1-1-1">1.1.1</a>
+        </p>
+      </article>
+
+      <!-- Older: 1.0 collapsed -->
+      <div class="older">
+        <details>
+          <summary>1.0 — First light · January 2026</summary>
+          <div class="release-inner">
+            <p class="release-name">First light</p>
+            <p class="release-intro">
+              Quiet Light arrives on the App Store — a contemplative companion for symbolic reflection and spacious presence.
+            </p>
+            <ul class="change-list">
+              <li>
+                <strong>Three presences</strong>
+                Quiet Light, Quiet Sun, and Quiet Moon — each offering a distinct quality of stillness.
+              </li>
+              <li>
+                <strong>Gentle companionship</strong>
+                Warm reflection without pressure, prescriptions, or verdicts.
+              </li>
+              <li>
+                <strong>Free tier</strong>
+                Three reflections of the day, always available and always complete.
+              </li>
+              <li>
+                <strong>Premium</strong>
+                Deeper companionship, gentle continuity, and richer responses across all three presences.
+              </li>
+            </ul>
+          </div>
+        </details>
       </div>
-      <p class="release-name">First light</p>
-      <p class="release-intro">
-        Quiet Light arrives on the App Store — a contemplative companion for symbolic reflection and spacious presence.
-      </p>
-      <ul class="change-list">
-        <li>
-          <strong>Three presences</strong>
-          Quiet Light, Quiet Sun, and Quiet Moon — each offering a distinct quality of stillness.
-        </li>
-        <li>
-          <strong>Gentle companionship</strong>
-          Warm reflection without pressure, prescriptions, or verdicts.
-        </li>
-        <li>
-          <strong>Free tier</strong>
-          Three reflections of the day, always available and always complete.
-        </li>
-        <li>
-          <strong>Premium</strong>
-          Deeper companionship, gentle continuity, and richer responses across all three presences.
-        </li>
-      </ul>
-    </article>
+    </div>
   </main>
 
   <footer>
