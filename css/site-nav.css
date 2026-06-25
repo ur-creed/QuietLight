@@ -191,6 +191,97 @@ body.has-site-header {
   background: #FFFFFF;
 }
 
+.site-support {
+  position: relative;
+  display: inline-flex;
+}
+
+.site-support-trigger {
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #8A8A8A;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.site-support-trigger:hover,
+.site-support-trigger[aria-expanded="true"] {
+  color: #1A1A1A;
+  background: #F5F5F0;
+}
+
+.site-support-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  width: min(280px, calc(100vw - 32px));
+  padding: 14px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E8E8E5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.site-support-popover[hidden] {
+  display: none;
+}
+
+.site-support-hint {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #8A8A8A;
+}
+
+.site-support-email-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.site-support-email {
+  display: block;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #1A1A1A;
+  background: #F5F5F0;
+  border: 1px solid #E8E8E5;
+  border-radius: 8px;
+  word-break: break-all;
+  user-select: all;
+}
+
+.site-support-copy {
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #FAFAF7;
+  background: #1A1A1A;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.site-support-copy:hover {
+  opacity: 0.9;
+}
+
+.site-support-status {
+  margin: 8px 0 0;
+  min-height: 1.2em;
+  font-size: 0.75rem;
+  color: #1A1A1A;
+}
+
 .site-footer {
   padding: 14px 20px;
   background: #F5F5F0;
@@ -281,8 +372,14 @@ body.has-site-header > main {
     display: none;
   }
 
-  .site-subnav-link {
+  .site-subnav-link,
+  .site-support {
     flex-shrink: 0;
+  }
+
+  .site-support-popover {
+    left: 0;
+    transform: none;
   }
 
   .site-social-label {

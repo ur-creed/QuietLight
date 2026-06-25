@@ -1,6 +1,7 @@
 (function () {
   var STORE_URL =
     "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902";
+  var SUPPORT_EMAIL = "support@quietlight.app";
 
   var mainNav = [
     { href: "index.html", label: "Home" },
@@ -11,7 +12,7 @@
   var subNav = [
     { href: "privacy.html", label: "Privacy" },
     { href: "terms.html", label: "Terms" },
-    { href: "mailto:support@quietlight.app", label: "Support" },
+    { action: "support", label: "Support" },
     { href: "pause.html", label: "Pause" },
   ];
 
@@ -27,7 +28,6 @@
   }
 
   function isActive(href) {
-    if (href.indexOf("mailto:") === 0) return false;
     return currentPage() === href;
   }
 
@@ -46,6 +46,118 @@
         );
       })
       .join("");
+  }
+
+  function buildSubNav(links) {
+    return links
+      .map(function (link) {
+        if (link.action === "support") {
+          return (
+            '<div class="site-support">' +
+            '<button type="button" class="site-subnav-link site-support-trigger" ' +
+            'aria-expanded="false" aria-controls="site-support-popover" ' +
+            'aria-haspopup="dialog">' +
+            link.label +
+            "</button>" +
+            '<div id="site-support-popover" class="site-support-popover" role="dialog" ' +
+            'aria-label="Support email" hidden>' +
+            '<p class="site-support-hint">Copy our address and paste it into whichever email app you use.</p>' +
+            '<div class="site-support-email-row">' +
+            '<code class="site-support-email">' +
+            SUPPORT_EMAIL +
+            "</code>" +
+            '<button type="button" class="site-support-copy">Copy address</button>' +
+            "</div>" +
+            '<p class="site-support-status" aria-live="polite"></p>' +
+            "</div></div>"
+          );
+        }
+        var cls =
+          "site-subnav-link" + (isActive(link.href) ? " is-active" : "");
+        return (
+          '<a href="' + link.href + '" class="' + cls + '">' + link.label + "</a>"
+        );
+      })
+      .join("");
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly", "");
+      ta.style.position = "fixed";
+      ta.style.left = "-9999px";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        if (document.execCommand("copy")) resolve();
+        else reject();
+      } catch (err) {
+        reject(err);
+      } finally {
+        document.body.removeChild(ta);
+      }
+    });
+  }
+
+  function initSupportPopover(header) {
+    var wrap = header.querySelector(".site-support");
+    if (!wrap) return;
+
+    var trigger = wrap.querySelector(".site-support-trigger");
+    var popover = wrap.querySelector(".site-support-popover");
+    var copyBtn = wrap.querySelector(".site-support-copy");
+    var status = wrap.querySelector(".site-support-status");
+    var copiedTimer;
+
+    function setOpen(open) {
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      popover.hidden = !open;
+      if (!open) {
+        status.textContent = "";
+        clearTimeout(copiedTimer);
+      }
+    }
+
+    function isOpen() {
+      return trigger.getAttribute("aria-expanded") === "true";
+    }
+
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setOpen(!isOpen());
+    });
+
+    copyBtn.addEventListener("click", function () {
+      copyText(SUPPORT_EMAIL)
+        .then(function () {
+          status.textContent = "Copied! Paste it into your email app.";
+          clearTimeout(copiedTimer);
+          copiedTimer = setTimeout(function () {
+            status.textContent = "";
+          }, 3000);
+        })
+        .catch(function () {
+          status.textContent =
+            "Could not copy automatically — select the address above.";
+        });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!isOpen()) return;
+      if (!wrap.contains(e.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && isOpen()) {
+        setOpen(false);
+        trigger.focus();
+      }
+    });
   }
 
   var skip = document.createElement("a");
@@ -81,10 +193,11 @@
     "</div></div></div>" +
     '<div class="site-header-sub">' +
     '<nav class="site-subnav" aria-label="Site pages">' +
-    buildNav(subNav, "site-subnav-link") +
+    buildSubNav(subNav) +
     "</nav></div>";
   document.body.prepend(header);
   document.body.classList.add("has-site-header");
+  initSupportPopover(header);
 
   var main =
     document.querySelector("main") || document.querySelector("#root main");
