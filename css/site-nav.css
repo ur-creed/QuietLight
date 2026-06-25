@@ -1,7 +1,12 @@
 /* Shared site navigation — Quiet Light */
 
+:root {
+  --site-header-h: 90px;
+  --site-footer-h: 44px;
+}
+
 body.has-site-header {
-  padding-top: 96px;
+  padding-top: var(--site-header-h);
 }
 
 .site-header {
@@ -22,10 +27,10 @@ body.has-site-header {
 .site-header-inner {
   display: flex;
   align-items: center;
-  gap: 12px 16px;
+  gap: 10px 14px;
   max-width: 960px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 8px 20px;
   flex-wrap: wrap;
 }
 
@@ -88,29 +93,43 @@ body.has-site-header {
 .site-social {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
+  padding: 4px 10px 4px 12px;
+  background: #F5F5F0;
+  border: 1px solid #E8E8E5;
+  border-radius: 999px;
 }
 
-.site-social a {
+.site-social-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  letter-spacing: 0.03em;
+  margin-right: 2px;
+  white-space: nowrap;
+}
+
+.site-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   color: #8A8A8A;
   border-radius: 50%;
+  text-decoration: none;
   transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
-.site-social a:hover {
+.site-social-link:hover {
   color: #1A1A1A;
-  background: #F5F5F0;
+  background: #FFFFFF;
   transform: scale(1.06);
 }
 
-.site-social svg {
-  width: 20px;
-  height: 20px;
+.site-social-link svg {
+  width: 18px;
+  height: 18px;
   display: block;
 }
 
@@ -146,7 +165,7 @@ body.has-site-header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2px 4px;
-  padding: 6px 0 8px;
+  padding: 4px 0 6px;
 }
 
 .site-subnav-link {
@@ -170,10 +189,11 @@ body.has-site-header {
 }
 
 .site-footer {
-  padding: 24px 24px 28px;
+  padding: 14px 20px;
   background: #F5F5F0;
   border-top: 1px solid #E8E8E5;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .site-footer-tagline {
@@ -200,9 +220,54 @@ body.has-site-header {
   left: 16px;
 }
 
+/* ── Fit pages: no page scroll (home, about, pause, 404) ── */
+html.page-fit {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.page-fit body {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+html.page-fit #root,
+html.page-fit body.page-fit-direct {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+html.page-fit main {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 10px 16px;
+  justify-content: center;
+}
+
+/* ── Scroll pages: privacy, terms, changelog ── */
+html.page-scroll body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html.page-scroll main {
+  flex: 1;
+}
+
 @media (max-width: 640px) {
+  :root {
+    --site-header-h: 128px;
+  }
+
   body.has-site-header {
-    padding-top: 132px;
+    padding-top: var(--site-header-h);
   }
 
   .site-header-inner {
@@ -245,5 +310,9 @@ body.has-site-header {
 
   .site-subnav-link {
     flex-shrink: 0;
+  }
+
+  .site-social-label {
+    font-size: 0.72rem;
   }
 }

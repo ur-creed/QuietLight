@@ -441,6 +441,76 @@
       color: var(--text);
     }
 
+    .version-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    html.page-fit .app-icon {
+      width: clamp(56px, 9vh, 80px);
+      height: clamp(56px, 9vh, 80px);
+      margin-bottom: 8px;
+      border-radius: 18px;
+    }
+    html.page-fit h1 {
+      font-size: clamp(1.65rem, 4.2vh, 2.2rem);
+      margin-bottom: 4px;
+    }
+    html.page-fit .subtitle {
+      font-size: clamp(0.9rem, 2vh, 1.05rem);
+      margin-bottom: 10px;
+    }
+    html.page-fit .download-prompt {
+      font-size: 0.95rem;
+      margin: 6px 0 8px;
+    }
+    html.page-fit .store-buttons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px 14px;
+    }
+    html.page-fit .download-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+    html.page-fit .app-store-link img {
+      width: 150px;
+      height: 50px;
+    }
+    html.page-fit .qr-code-container {
+      padding: 5px;
+    }
+    html.page-fit .qr-code-container img {
+      width: 68px;
+      height: 68px;
+    }
+    html.page-fit .qr-label {
+      font-size: 0.62rem;
+      margin-top: 3px;
+    }
+    html.page-fit .google-play-container {
+      width: 150px;
+      height: 50px;
+    }
+    html.page-fit .version-row {
+      margin-top: 8px;
+      gap: 5px;
+    }
+    html.page-fit .version-info {
+      margin: 0;
+      font-size: 0.82rem;
+    }
+    html.page-fit .whats-new-btn {
+      margin-top: 0;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+    }
+
     @media (max-width: 640px) {
       h1 { font-size: 2.4rem; }
       .subtitle { font-size: 1.15rem; }
@@ -500,13 +570,15 @@
             </div>
           </div>
          
-          <p class="version-info">Current Version: 1.1.1</p>
-          <button class="whats-new-btn" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
+          <div class="version-row">
+            <p class="version-info">Current Version: 1.1.1</p>
+            <button class="whats-new-btn" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
             </svg>
             What's new
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </main>

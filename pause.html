@@ -41,7 +41,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 48px 24px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -102,8 +101,16 @@
       font-size: 0.85rem;
       color: var(--text-secondary);
       opacity: 0.6;
-      margin-top: 56px;
+      margin-top: clamp(20px, 5vh, 40px);
       min-height: 1.4em;
+    }
+
+    html.page-fit .question {
+      font-size: clamp(1.1rem, 3vh, 1.35rem);
+      margin-bottom: 24px;
+    }
+    html.page-fit .invitation {
+      margin-bottom: 28px;
     }
 
     .return {
