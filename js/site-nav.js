@@ -65,10 +65,19 @@
     '<nav class="site-nav" aria-label="Main">' +
     buildNav(mainNav, "site-nav-link") +
     "</nav>" +
+    '<div class="site-header-actions">' +
+    '<div class="site-social">' +
+    '<a href="https://x.com/QuietLightApp" target="_blank" rel="noopener noreferrer" aria-label="Follow on X">' +
+    socialSvg.x +
+    "</a>" +
+    '<a href="https://www.instagram.com/quietlightapp/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">' +
+    socialSvg.instagram +
+    "</a>" +
+    "</div>" +
     '<a href="' +
     STORE_URL +
     '" class="site-cta" target="_blank" rel="noopener noreferrer">Get the app</a>' +
-    "</div></div>" +
+    "</div></div></div>" +
     '<div class="site-header-sub">' +
     '<nav class="site-subnav" aria-label="Site pages">' +
     buildNav(subNav, "site-subnav-link") +
@@ -89,13 +98,5 @@
   }
   footer.className = "site-footer";
   footer.innerHTML =
-    '<p class="site-footer-tagline">Stillness is already complete.</p>' +
-    '<div class="site-footer-social">' +
-    '<a href="https://x.com/QuietLightApp" target="_blank" rel="noopener noreferrer" aria-label="Follow on X">' +
-    socialSvg.x +
-    "</a>" +
-    '<a href="https://www.instagram.com/quietlightapp/" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">' +
-    socialSvg.instagram +
-    "</a>" +
-    "</div>";
+    '<p class="site-footer-tagline">Stillness is already complete.</p>';
 })();

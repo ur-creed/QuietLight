@@ -78,6 +78,42 @@ body.has-site-header {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.site-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #8A8A8A;
+  border-radius: 50%;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.site-social a:hover {
+  color: #1A1A1A;
+  background: #F5F5F0;
+  transform: scale(1.06);
+}
+
+.site-social svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 .site-cta {
   display: inline-flex;
   align-items: center;
@@ -141,32 +177,10 @@ body.has-site-header {
 }
 
 .site-footer-tagline {
-  margin: 0 0 14px;
+  margin: 0;
   font-size: 0.85rem;
   color: #8A8A8A;
   font-style: italic;
-}
-
-.site-footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.site-footer-social a {
-  color: #8A8A8A;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.site-footer-social a:hover {
-  color: #1A1A1A;
-  transform: scale(1.08);
-}
-
-.site-footer-social svg {
-  width: 22px;
-  height: 22px;
-  display: block;
 }
 
 .skip-link {
@@ -205,9 +219,15 @@ body.has-site-header {
     justify-content: flex-start;
   }
 
-  .site-cta {
+  .site-header-actions {
     width: 100%;
+    justify-content: space-between;
+  }
+
+  .site-cta {
+    flex: 1;
     justify-content: center;
+    text-align: center;
   }
 
   .site-subnav {
