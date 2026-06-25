@@ -13,7 +13,7 @@ Part of **1.1 — Reflection rhythm** ↓
 
 ---
 
-## 1.1 · Release · February 2026
+## 1.1 · Release · June 18, 2026
 
 - **Daily reflections** — three thoughtfully spaced reflections per day
 - **Daily reminders** — optional gentle nudges to pause and reflect
