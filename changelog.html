@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="css/site-nav.css">
   <title>Changelog – Quiet Light</title>
   <style>
     :root {
@@ -274,29 +275,6 @@
 
     .older .release-name { margin-top: 16px; }
 
-    footer {
-      padding: 20px 24px;
-      background: var(--background-secondary);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-    }
-
-    .footer-links a:hover { color: var(--text); }
-
     @media (max-width: 600px) {
       .latest-date, .release-date { margin-left: 0; width: 100%; }
     }
@@ -391,12 +369,7 @@
     </div>
   </main>
 
-  <footer>
-    <nav class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="mailto:support@quietlight.app">Support</a>
-    </nav>
-  </footer>
+  <footer></footer>
+  <script src="js/site-nav.js" defer></script>
 </body>
 </html>

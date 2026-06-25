@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="noindex" />
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="css/site-nav.css">
   <title>Not found – Quiet Light</title>
   <style>
     :root {
@@ -65,32 +66,9 @@
       margin: 0 0 40px;
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px 24px;
-      justify-content: center;
-    }
-
-    .links a {
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.95rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2px;
-      transition: border-color 0.2s ease;
-    }
-
-    .links a:hover {
-      border-bottom-color: var(--text);
-    }
-
-    footer {
-      padding: 20px 24px;
-      background: var(--background-secondary);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.85rem;
+    .hint {
+      margin-top: 8px;
+      font-size: 0.9rem;
       color: var(--text-secondary);
     }
   </style>
@@ -102,16 +80,10 @@
     <p class="body">
       Only a gentle invitation to return — to stillness, to home, or to a quiet pause along the way.
     </p>
-    <nav class="links">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/changelog.html">Changelog</a>
-      <a href="/pause.html">Pause</a>
-    </nav>
+    <p class="hint">Use the menu above to find your way back.</p>
   </main>
 
-  <footer>
-    Stillness is already complete.
-  </footer>
+  <footer></footer>
+  <script src="js/site-nav.js" defer></script>
 </body>
 </html>

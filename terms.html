@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="css/site-nav.css">
   <title>Terms of Service – Quiet Light</title>
   <style>
     :root {
@@ -42,7 +43,7 @@
 
     main {
       flex: 1;
-      padding: var(--spacing-xl) var(--spacing-xl) calc(var(--spacing-3xl) + 100px);
+      padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-3xl);
       max-width: 800px;
       margin: 0 auto;
       background: var(--background-default);
@@ -108,39 +109,9 @@
       text-decoration: underline;
     }
 
-    footer {
-      position: sticky;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: var(--spacing-md) var(--spacing-xl);
-      background: var(--background-secondary);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-      z-index: 10;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--spacing-md);
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--text);
-    }
-
     @media (max-width: 600px) {
       main {
-        padding: var(--spacing-lg) var(--spacing-lg) calc(var(--spacing-3xl) + 100px);
+        padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-3xl);
       }
       .title { font-size: 1.9rem; }
     }
@@ -251,13 +222,7 @@
     <p class="last-updated">Last Updated: June 1, 2026</p>
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:support@quietlight.app">Support</a>
-    </div>
-  </footer>
+  <footer></footer>
+  <script src="js/site-nav.js" defer></script>
 </body>
 </html>

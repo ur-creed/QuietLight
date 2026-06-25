@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="stylesheet" href="css/site-nav.css">
   <title>About – Quiet Light</title>
   <style>
     :root {
@@ -112,34 +113,6 @@
       margin-top: var(--spacing-3xl);
     }
 
-    footer {
-      padding: var(--spacing-lg) var(--spacing-xl);
-      background: var(--background-secondary);
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--spacing-md);
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .footer-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--text);
-      text-decoration: underline;
-    }
-
     @media (max-width: 600px) {
       main {
         padding: var(--spacing-lg) var(--spacing-lg);
@@ -193,23 +166,15 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
-        <a href="mailto:support@quietlight.app">Support</a>
-      </div>
-    </footer>
+    <footer></footer>
   </div>
 
   <script>
-    // Optional fade-in
     window.addEventListener('load', () => {
       document.querySelector('.content').style.opacity = '1';
       document.querySelector('.content').style.transition = 'opacity 0.8s ease';
     });
   </script>
+  <script src="js/site-nav.js" defer></script>
 </body>
 </html>

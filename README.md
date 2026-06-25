@@ -44,7 +44,7 @@ Static landing page for [quietlight.app](https://quietlight.app) — hosted on G
 | [`privacy.html`](privacy.html) | Privacy policy |
 | [`terms.html`](terms.html) | Terms of service |
 | [`pause.html`](pause.html) | A quiet place to sit for a moment |
-| [`changelog.html`](changelog.html) | Version history — releases and trailing patches |
+| [`changelog.html`](changelog.html) | Updates — version history |
 
 App source lives separately at [quiet-light-illuminations](https://github.com/ur-creed/quiet-light-illuminations).
 
