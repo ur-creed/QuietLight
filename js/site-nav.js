@@ -2,13 +2,13 @@
   var STORE_URL =
     "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902";
 
-  var primaryNav = [
+  var mainNav = [
     { href: "index.html", label: "Home" },
     { href: "about.html", label: "About" },
     { href: "changelog.html", label: "Updates" },
   ];
 
-  var footerNav = [
+  var subNav = [
     { href: "privacy.html", label: "Privacy" },
     { href: "terms.html", label: "Terms" },
     { href: "mailto:support@quietlight.app", label: "Support" },
@@ -27,13 +27,14 @@
   }
 
   function isActive(href) {
+    if (href.indexOf("mailto:") === 0) return false;
     return currentPage() === href;
   }
 
-  function buildPrimaryNav() {
-    return primaryNav
+  function buildNav(links, linkClass) {
+    return links
       .map(function (link) {
-        var cls = "site-nav-link" + (isActive(link.href) ? " is-active" : "");
+        var cls = linkClass + (isActive(link.href) ? " is-active" : "");
         return (
           '<a href="' +
           link.href +
@@ -47,14 +48,6 @@
       .join("");
   }
 
-  function buildFooterNav() {
-    return footerNav
-      .map(function (link) {
-        return '<a href="' + link.href + '">' + link.label + "</a>";
-      })
-      .join("");
-  }
-
   var skip = document.createElement("a");
   skip.href = "#main-content";
   skip.className = "skip-link";
@@ -64,17 +57,22 @@
   var header = document.createElement("header");
   header.className = "site-header";
   header.innerHTML =
+    '<div class="site-header-main">' +
     '<div class="site-header-inner">' +
     '<a href="index.html" class="site-brand" aria-label="Quiet Light home">' +
     '<img src="images/icon.png" alt="" width="32" height="32" class="site-brand-icon" />' +
     "<span>Quiet Light</span></a>" +
     '<nav class="site-nav" aria-label="Main">' +
-    buildPrimaryNav() +
+    buildNav(mainNav, "site-nav-link") +
     "</nav>" +
     '<a href="' +
     STORE_URL +
     '" class="site-cta" target="_blank" rel="noopener noreferrer">Get the app</a>' +
-    "</div>";
+    "</div></div>" +
+    '<div class="site-header-sub">' +
+    '<nav class="site-subnav" aria-label="Site pages">' +
+    buildNav(subNav, "site-subnav-link") +
+    "</nav></div>";
   document.body.prepend(header);
   document.body.classList.add("has-site-header");
 
@@ -91,9 +89,7 @@
   }
   footer.className = "site-footer";
   footer.innerHTML =
-    '<nav class="site-footer-nav" aria-label="Footer">' +
-    buildFooterNav() +
-    "</nav>" +
+    '<p class="site-footer-tagline">Stillness is already complete.</p>' +
     '<div class="site-footer-social">' +
     '<a href="https://x.com/QuietLightApp" target="_blank" rel="noopener noreferrer" aria-label="Follow on X">' +
     socialSvg.x +
