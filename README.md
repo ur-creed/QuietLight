@@ -86,6 +86,8 @@ Just a quiet companion — offering light, a gentle question, or a resonant pers
     &nbsp;·&nbsp;
     <a href="https://www.instagram.com/quietlightapp/">Instagram</a>
     &nbsp;·&nbsp;
+    <a href="https://www.tiktok.com/@quietlightapp">TikTok</a>
+    &nbsp;·&nbsp;
     support@quietlight.app
   </sub>
 </p>
