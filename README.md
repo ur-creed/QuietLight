@@ -50,11 +50,12 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 
 ## Changelog
 
-**Current: v1.1.1** — newest first on the site; 1.1 release story expandable from home.
+**Current: v1.2** — newest first on the site; full history on the changelog page.
 
 | Version | Highlights |
 |---------|------------|
-| **1.1.1** (latest) | Saved reflections, shareable cards, About copy, stability |
+| **1.2** (latest) | Memory Garden, Threads of Light, archive & search, cloud-synced saves |
+| **1.1.1** | Saved reflections, shareable cards, About copy, stability |
 | **1.1** | Daily reflections, reminders, calm meter, kinder rhythm |
 | **1.0** | Initial App Store release — three presences, free & premium |
 

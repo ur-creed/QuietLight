@@ -2,7 +2,19 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.1.1 · Latest · June 25, 2026
+## 1.2 · Latest · July 11, 2026
+
+**Memory & continuity**
+
+- **Memory Garden** — browse themes your companions remember; gently release a memory when you're ready
+- **Threads of Light** — a weekly, AI-woven letter from the themes in your reflections
+- **Conversation archive & search** — search by title and themes; archive threads; filter by companion
+- **Cloud-synced saved reflections** — your keepsake library across devices
+- **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
+
+---
+
+## 1.1.1 · Update · June 25, 2026
 
 - **Saved reflections** — save, browse, and revisit meaningful moments
 - **Shareable reflection cards** — export reflections as on-brand images
