@@ -91,59 +91,115 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+      padding: 40px 24px 48px;
       text-align: center;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .wrapper {
-      max-width: 620px;
+      max-width: 560px;
       width: 100%;
       position: relative;
       z-index: 1;
     }
 
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Hero: brand presence ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
     .icon-aura {
-      margin: 0 auto var(--spacing-md);
+      margin: 0 auto 28px;
     }
 
     .app-icon {
-      width: 108px;
-      height: 108px;
-      border-radius: 24px;
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
       margin: 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
     }
+
     h1 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin: 0 0 8px;
-    }
-    .subtitle {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      margin: 0 0 var(--spacing-md);
-    }
-    .download-prompt {
-      font-size: 1.2rem;
+      font-size: 2.75rem;
       font-weight: 600;
-      margin: var(--spacing-sm) 0 var(--spacing-md);
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      line-height: 1.15;
     }
+
+    .tagline {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--text);
+      margin: 0 0 16px;
+      line-height: 1.4;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin: 0;
+      max-width: 26em;
+    }
+
+    /* Soft pause between brand and download */
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      margin: 36px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(180, 160, 120, 0.55),
+        transparent
+      );
+      border: none;
+    }
+
+    /* ── Download: invitation, not a hard sell ── */
+    .download {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .download-prompt {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin: 0 0 22px;
+    }
+
     .store-buttons {
       display: flex;
       flex-direction: column;
-      flex-wrap: nowrap;
-      gap: var(--spacing-md);
+      gap: 28px;
       justify-content: center;
       align-items: center;
     }
+
     .download-section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: var(--spacing-md);
+      gap: 20px;
     }
+
     .app-store-link {
       display: inline-block;
       transition: transform 0.2s ease;
@@ -155,22 +211,22 @@
       object-fit: contain;
     }
     .qr-code-container {
-      padding: 10px;
+      padding: 14px;
       background: var(--background-default);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     }
     .qr-code-container img {
-      width: 120px;
-      height: 120px;
+      width: 132px;
+      height: 132px;
       display: block;
     }
     .qr-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-secondary);
-      margin-top: 6px;
-      letter-spacing: 0.5px;
+      margin-top: 10px;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
     .google-play-container {
@@ -207,6 +263,8 @@
       border: 3px solid #1A1A1A;
       border-radius: 6px;
     }
+
+    /* ── Meta: quiet footnote ── */
     .version-info {
       margin: 0;
       color: var(--text-secondary);
@@ -217,7 +275,7 @@
       align-items: center;
       gap: 8px;
       margin-top: 0;
-      padding: 10px 20px;
+      padding: 11px 22px;
       font-size: 0.9rem;
       font-weight: 500;
       font-family: inherit;
@@ -427,11 +485,41 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
-      margin-top: var(--spacing-md);
+      gap: 14px;
+      margin-top: 40px;
     }
 
     @media (max-width: 640px) {
+      main {
+        padding: 32px 20px 40px;
+      }
+
+      h1 {
+        font-size: 2.35rem;
+      }
+
+      .tagline {
+        font-size: 1.15rem;
+      }
+
+      .lede {
+        font-size: 1rem;
+      }
+
+      .hero-divider {
+        margin: 28px auto;
+      }
+
+      .app-icon {
+        width: 108px;
+        height: 108px;
+        border-radius: 24px;
+      }
+
+      .icon-aura {
+        margin-bottom: 22px;
+      }
+
       .whats-new-modal {
         padding: var(--spacing-md);
       }
@@ -441,248 +529,108 @@
     }
 
     /*
-     * Desktop: fit the landing page in one viewport (no page scroll).
-     * Mobile keeps natural scrolling. Height queries tighten short laptops.
+     * Desktop: spacious middle — room to breathe.
+     * Prefer natural proportions over forcing zero-scroll.
+     * Store badges sit in a calm horizontal band with real gaps.
      */
     @media (min-width: 768px) {
-      html {
-        height: 100%;
+      main {
+        padding: 48px 32px 56px;
       }
 
-      body.page-home.has-site-header {
-        height: 100%;
-        height: 100dvh;
-        min-height: 0;
-        overflow: hidden;
-      }
-
-      body.page-home #root {
-        flex: 1;
-        min-height: 0;
-        height: 100%;
-        overflow: hidden;
-      }
-
-      body.page-home main {
-        flex: 1;
-        min-height: 0;
-        padding: 12px 24px 16px;
-        overflow: hidden;
-      }
-
-      body.page-home .site-footer {
-        padding: 10px 20px;
+      .wrapper {
+        max-width: 640px;
       }
 
       .icon-aura {
+        margin-bottom: 32px;
+      }
+
+      .app-icon {
+        width: 128px;
+        height: 128px;
+        border-radius: 30px;
+      }
+
+      .icon-aura::after {
+        border-radius: 30px;
+      }
+
+      h1 {
+        font-size: 3.1rem;
         margin-bottom: 14px;
       }
 
-      .app-icon {
-        width: 96px;
-        height: 96px;
-        border-radius: 22px;
+      .tagline {
+        font-size: 1.35rem;
+        margin-bottom: 18px;
       }
 
-      .icon-aura::after {
-        border-radius: 22px;
-      }
-
-      h1 {
-        font-size: 2.35rem;
-        margin-bottom: 4px;
-      }
-
-      .subtitle {
-        font-size: 1.08rem;
-        margin-bottom: 12px;
-      }
-
-      .download-prompt {
+      .lede {
         font-size: 1.1rem;
-        margin: 4px 0 14px;
+        line-height: 1.7;
       }
 
-      /* Badge + QR + Play in one horizontal band (kills the tall stack) */
-      .store-buttons {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .download-section {
-        flex-direction: row;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .app-store-link img,
-      .google-play-container {
-        width: 180px;
-        height: 60px;
-      }
-
-      .qr-code-container {
-        padding: 8px;
-      }
-
-      .qr-code-container img {
-        width: 88px;
-        height: 88px;
-      }
-
-      .qr-label {
-        margin-top: 4px;
-        font-size: 0.68rem;
-      }
-
-      .coming-soon-text {
-        font-size: 0.82rem;
-        padding: 4px 10px;
-        border-width: 2px;
-      }
-
-      .version-row {
-        margin-top: 16px;
-        gap: 8px;
-      }
-
-      .whats-new-btn {
-        padding: 8px 16px;
-        font-size: 0.88rem;
-      }
-    }
-
-    /* Short / laptop viewports — extra compact so nothing scrolls */
-    @media (min-width: 768px) and (max-height: 780px) {
-      .icon-aura {
-        margin-bottom: 10px;
-      }
-
-      .app-icon {
-        width: 72px;
-        height: 72px;
-        border-radius: 18px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      }
-
-      .icon-aura::after {
-        border-radius: 18px;
-      }
-
-      h1 {
-        font-size: 1.85rem;
-      }
-
-      .subtitle {
-        font-size: 0.98rem;
-        margin-bottom: 8px;
-      }
-
-      .download-prompt {
-        font-size: 1rem;
-        margin: 2px 0 10px;
-      }
-
-      .store-buttons {
-        gap: 14px;
-      }
-
-      .download-section {
-        gap: 12px;
-      }
-
-      .app-store-link img,
-      .google-play-container {
-        width: 156px;
-        height: 52px;
-      }
-
-      .qr-code-container {
-        padding: 6px;
-      }
-
-      .qr-code-container img {
-        width: 68px;
-        height: 68px;
-      }
-
-      .version-row {
-        margin-top: 12px;
-        gap: 6px;
-      }
-
-      .version-info {
-        font-size: 0.85rem;
-      }
-
-      .whats-new-btn {
-        padding: 6px 14px;
-        font-size: 0.84rem;
-      }
-
-      body.page-home main {
-        padding: 8px 20px 10px;
-      }
-
-      body.page-home .site-footer {
-        padding: 8px 16px;
-      }
-
-      body.page-home .site-footer-tagline {
-        font-size: 0.8rem;
-      }
-    }
-
-    /* Very short desktop (e.g. half-height window) — still no page scroll */
-    @media (min-width: 768px) and (max-height: 640px) {
-      .icon-aura {
-        margin-bottom: 6px;
-      }
-
-      .app-icon {
+      .hero-divider {
         width: 56px;
-        height: 56px;
-        border-radius: 14px;
-      }
-
-      .icon-aura::after {
-        border-radius: 14px;
-      }
-
-      /* Fewer motes when height is tight — keep the field light */
-      .ambient-mote:nth-child(n+6) {
-        display: none;
-      }
-
-      h1 {
-        font-size: 1.55rem;
-      }
-
-      .subtitle {
-        font-size: 0.9rem;
-        margin-bottom: 4px;
+        margin: 44px auto;
       }
 
       .download-prompt {
-        display: none; /* badges speak for themselves */
+        margin-bottom: 28px;
       }
 
-      .qr-code-container {
-        display: none; /* scan target is mainly for phones */
+      .store-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 32px 40px;
+      }
+
+      .download-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
       }
 
       .app-store-link img,
       .google-play-container {
-        width: 140px;
-        height: 46px;
+        width: 200px;
+        height: 66px;
+      }
+
+      .qr-code-container {
+        padding: 12px;
+      }
+
+      .qr-code-container img {
+        width: 112px;
+        height: 112px;
       }
 
       .version-row {
-        margin-top: 8px;
-        flex-direction: row;
-        gap: 12px;
+        margin-top: 44px;
+        gap: 16px;
+      }
+    }
+
+    /* Tall desktops: even more air in the center */
+    @media (min-width: 768px) and (min-height: 900px) {
+      main {
+        padding: 56px 32px 64px;
+      }
+
+      .icon-aura {
+        margin-bottom: 36px;
+      }
+
+      .hero-divider {
+        margin: 52px auto;
+      }
+
+      .version-row {
+        margin-top: 52px;
       }
     }
   </style>
@@ -706,41 +654,50 @@
 
       <div class="wrapper">
         <div class="content" id="content">
-          <div class="icon-aura ql-reveal ql-reveal--1">
-            <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
-          </div>
-          <h1 class="ql-reveal ql-reveal--2">Quiet Light</h1>
-          <p class="subtitle ql-reveal ql-reveal--3">AI companion for mindfulness and meditation</p>
+          <section class="hero" aria-label="Quiet Light">
+            <div class="icon-aura ql-reveal ql-reveal--1">
+              <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
+            </div>
+            <h1 class="ql-reveal ql-reveal--2">Quiet Light</h1>
+            <p class="tagline ql-reveal ql-reveal--3">Gentle presence for stillness</p>
+            <p class="lede ql-reveal ql-reveal--3">
+              A calm AI companion for reflection — warm, spacious, and free of prescriptions or verdicts.
+            </p>
+          </section>
 
-          <h2 class="download-prompt ql-reveal ql-reveal--4">Download the app</h2>
+          <div class="hero-divider ql-reveal ql-reveal--4" aria-hidden="true"></div>
 
-          <div class="store-buttons ql-reveal ql-reveal--5">
-            <div class="download-section">
-              <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902"
-                 class="app-store-link" target="_blank" rel="noopener noreferrer">
-                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg"
-                     alt="Download on the App Store" />
-              </a>
+          <section class="download" aria-label="Download">
+            <h2 class="download-prompt ql-reveal ql-reveal--4">Begin when you're ready</h2>
 
-              <div class="qr-code-container ql-alive">
-                <img src="images/qr-code.png"
-                     alt="QR Code - Scan to download Quiet Light on the App Store"
-                     width="148" height="148" />
-                <div class="qr-label">Scan to download</div>
+            <div class="store-buttons ql-reveal ql-reveal--5">
+              <div class="download-section">
+                <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902"
+                   class="app-store-link" target="_blank" rel="noopener noreferrer">
+                  <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg"
+                       alt="Download on the App Store" />
+                </a>
+
+                <div class="qr-code-container ql-alive">
+                  <img src="images/qr-code.png"
+                       alt="QR Code - Scan to download Quiet Light on the App Store"
+                       width="148" height="148" />
+                  <div class="qr-label">Scan to download</div>
+                </div>
+              </div>
+
+              <div class="google-play-container">
+                <img src="images/GooglePlayBadge.svg"
+                     alt="Get it on Google Play" />
+                <div class="coming-soon-badge">
+                  <div class="coming-soon-text">Coming Soon</div>
+                </div>
               </div>
             </div>
-
-            <div class="google-play-container">
-              <img src="images/GooglePlayBadge.svg"
-                   alt="Get it on Google Play" />
-              <div class="coming-soon-badge">
-                <div class="coming-soon-text">Coming Soon</div>
-              </div>
-            </div>
-          </div>
+          </section>
 
           <div class="version-row ql-reveal ql-reveal--6">
-            <p class="version-info">Current Version: 1.2</p>
+            <p class="version-info">Version 1.2</p>
             <button class="whats-new-btn ql-invite ql-glow-hover" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
