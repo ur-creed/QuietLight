@@ -36,6 +36,7 @@
   <link rel="apple-touch-icon" href="/images/icon.png" />
   <link rel="stylesheet" href="css/site-nav.css">
   <link rel="stylesheet" href="css/site-loader.css">
+  <link rel="stylesheet" href="css/site-motion.css">
  
   <title>Quiet Light - AI Companion for Mindfulness & Meditation App</title>
  
@@ -93,15 +94,25 @@
       padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
-    .wrapper { max-width: 620px; width: 100%; }
- 
+    .wrapper {
+      max-width: 620px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon-aura {
+      margin: 0 auto var(--spacing-md);
+    }
+
     .app-icon {
       width: 108px;
       height: 108px;
       border-radius: 24px;
-      margin: 0 auto var(--spacing-md);
+      margin: 0;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
     h1 {
@@ -463,11 +474,18 @@
         padding: 10px 20px;
       }
 
+      .icon-aura {
+        margin-bottom: 14px;
+      }
+
       .app-icon {
         width: 96px;
         height: 96px;
         border-radius: 22px;
-        margin-bottom: 14px;
+      }
+
+      .icon-aura::after {
+        border-radius: 22px;
       }
 
       h1 {
@@ -538,12 +556,19 @@
 
     /* Short / laptop viewports — extra compact so nothing scrolls */
     @media (min-width: 768px) and (max-height: 780px) {
+      .icon-aura {
+        margin-bottom: 10px;
+      }
+
       .app-icon {
         width: 72px;
         height: 72px;
         border-radius: 18px;
-        margin-bottom: 10px;
         box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      .icon-aura::after {
+        border-radius: 18px;
       }
 
       h1 {
@@ -612,11 +637,23 @@
 
     /* Very short desktop (e.g. half-height window) — still no page scroll */
     @media (min-width: 768px) and (max-height: 640px) {
+      .icon-aura {
+        margin-bottom: 6px;
+      }
+
       .app-icon {
         width: 56px;
         height: 56px;
         border-radius: 14px;
-        margin-bottom: 6px;
+      }
+
+      .icon-aura::after {
+        border-radius: 14px;
+      }
+
+      /* Fewer motes when height is tight — keep the field light */
+      .ambient-mote:nth-child(n+6) {
+        display: none;
       }
 
       h1 {
@@ -654,31 +691,45 @@
   <script src="js/site-loader.js"></script>
   <div id="root">
     <main>
+      <!-- Soft light field — decorative only -->
+      <div class="ambient" aria-hidden="true">
+        <div class="ambient-glow ambient-glow--primary"></div>
+        <div class="ambient-glow ambient-glow--secondary"></div>
+        <div class="ambient-glow ambient-glow--tertiary"></div>
+        <span class="ambient-mote" style="--x:18%;--y:62%;--delay:0s;--dur:16s;--drift-x:18px"></span>
+        <span class="ambient-mote" style="--x:72%;--y:28%;--delay:2s;--dur:13s;--drift-x:-14px"></span>
+        <span class="ambient-mote" style="--x:42%;--y:78%;--delay:4.5s;--dur:18s;--drift-x:10px"></span>
+        <span class="ambient-mote" style="--x:85%;--y:55%;--delay:1.2s;--dur:15s;--drift-x:-20px"></span>
+        <span class="ambient-mote" style="--x:28%;--y:22%;--delay:6s;--dur:17s;--drift-x:8px"></span>
+        <span class="ambient-mote" style="--x:58%;--y:48%;--delay:3.5s;--dur:14s;--drift-x:-12px"></span>
+      </div>
+
       <div class="wrapper">
-        <!-- Main Content -->
         <div class="content" id="content">
-          <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
-          <h1>Quiet Light</h1>
-          <p class="subtitle">AI companion for mindfulness and meditation</p>
-         
-          <h2 class="download-prompt">Download the app</h2>
-         
-          <div class="store-buttons">
+          <div class="icon-aura ql-reveal ql-reveal--1">
+            <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
+          </div>
+          <h1 class="ql-reveal ql-reveal--2">Quiet Light</h1>
+          <p class="subtitle ql-reveal ql-reveal--3">AI companion for mindfulness and meditation</p>
+
+          <h2 class="download-prompt ql-reveal ql-reveal--4">Download the app</h2>
+
+          <div class="store-buttons ql-reveal ql-reveal--5">
             <div class="download-section">
               <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902?itscg=30200&itsct=apps_box_badge&mttnsubad=6759539902"
                  class="app-store-link" target="_blank" rel="noopener noreferrer">
                 <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1780704000&format=svg"
                      alt="Download on the App Store" />
               </a>
-             
-              <div class="qr-code-container">
+
+              <div class="qr-code-container ql-alive">
                 <img src="images/qr-code.png"
                      alt="QR Code - Scan to download Quiet Light on the App Store"
                      width="148" height="148" />
                 <div class="qr-label">Scan to download</div>
               </div>
             </div>
-           
+
             <div class="google-play-container">
               <img src="images/GooglePlayBadge.svg"
                    alt="Get it on Google Play" />
@@ -687,10 +738,10 @@
               </div>
             </div>
           </div>
-         
-          <div class="version-row">
+
+          <div class="version-row ql-reveal ql-reveal--6">
             <p class="version-info">Current Version: 1.2</p>
-            <button class="whats-new-btn" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
+            <button class="whats-new-btn ql-invite ql-glow-hover" id="whats-new-btn" type="button" aria-expanded="false" aria-controls="whats-new-modal">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2a1 1 0 0 1 .993.883L13 3v1.07a7.002 7.002 0 0 1 4.933 11.292l.74.74a1 1 0 0 1-1.32 1.497l-.094-.083-.74-.74A7.002 7.002 0 0 1 5.07 12H4a1 1 0 0 1-.117-1.993L4 10h1.07A7.002 7.002 0 0 1 12 4.07V3a1 1 0 0 1 1-1zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
             </svg>

@@ -1,0 +1,329 @@
+/* Quiet Light — soft motion language
+   Breath, glow, and gentle arrival. Never flashy. */
+
+:root {
+  --ql-glow-warm: rgba(255, 246, 220, 0.85);
+  --ql-glow-soft: rgba(250, 248, 240, 0.7);
+  --ql-glow-moon: rgba(230, 236, 245, 0.45);
+  --ql-mote: rgba(180, 160, 120, 0.35);
+  --ql-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ── Ambient light field (home & contemplative pages) ── */
+
+.ambient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  will-change: transform, opacity;
+}
+
+.ambient-glow--primary {
+  width: min(420px, 70vw);
+  height: min(420px, 70vw);
+  left: 50%;
+  top: 42%;
+  translate: -50% -50%;
+  background: radial-gradient(
+    circle,
+    var(--ql-glow-warm) 0%,
+    var(--ql-glow-soft) 38%,
+    transparent 70%
+  );
+  animation: ql-breathe 9s ease-in-out infinite;
+}
+
+.ambient-glow--secondary {
+  width: min(280px, 50vw);
+  height: min(280px, 50vw);
+  left: 58%;
+  top: 36%;
+  translate: -50% -50%;
+  background: radial-gradient(circle, var(--ql-glow-moon) 0%, transparent 68%);
+  animation: ql-breathe 11s ease-in-out 1.5s infinite reverse;
+  opacity: 0.7;
+}
+
+.ambient-glow--tertiary {
+  width: min(200px, 40vw);
+  height: min(200px, 40vw);
+  left: 38%;
+  top: 52%;
+  translate: -50% -50%;
+  background: radial-gradient(circle, rgba(255, 236, 200, 0.4) 0%, transparent 70%);
+  animation: ql-breathe 13s ease-in-out 0.8s infinite;
+  opacity: 0.55;
+}
+
+/* Soft dust motes — sparse, slow, luminous */
+.ambient-mote {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ql-mote);
+  box-shadow: 0 0 6px 1px rgba(255, 240, 200, 0.45);
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  opacity: 0;
+  animation: ql-mote var(--dur, 14s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes ql-breathe {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes ql-mote {
+  0% {
+    opacity: 0;
+    transform: translate(0, 8px) scale(0.6);
+  }
+  15% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(var(--drift-x, 12px), -28px) scale(1);
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--drift-x, 12px) * 1.4), -52px) scale(0.5);
+  }
+}
+
+/* ── Icon aura ── */
+
+.icon-aura {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.icon-aura::before {
+  content: "";
+  position: absolute;
+  inset: -28%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 244, 210, 0.75) 0%,
+    rgba(255, 248, 230, 0.25) 45%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: ql-breathe 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.icon-aura .app-icon,
+.icon-aura img {
+  position: relative;
+  transition: transform 0.6s var(--ql-ease), box-shadow 0.6s var(--ql-ease);
+}
+
+.icon-aura:hover .app-icon,
+.icon-aura:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 12px 36px rgba(180, 150, 80, 0.18);
+}
+
+/* Soft shimmer ring on aura (very subtle) */
+.icon-aura::after {
+  content: "";
+  position: absolute;
+  inset: -6%;
+  border-radius: inherit;
+  border: 1px solid rgba(200, 180, 140, 0.18);
+  border-radius: 28px;
+  opacity: 0;
+  animation: ql-ring 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ql-ring {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  40% {
+    opacity: 0.55;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+/* ── Staggered arrival (after site loader) ── */
+
+.ql-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+html.is-ready .ql-reveal {
+  animation: ql-rise 0.95s var(--ql-ease) forwards;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes ql-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay helpers */
+.ql-reveal--1 { --reveal-delay: 0.05s; }
+.ql-reveal--2 { --reveal-delay: 0.16s; }
+.ql-reveal--3 { --reveal-delay: 0.28s; }
+.ql-reveal--4 { --reveal-delay: 0.4s; }
+.ql-reveal--5 { --reveal-delay: 0.52s; }
+.ql-reveal--6 { --reveal-delay: 0.64s; }
+
+/* ── Soft interactive glows ── */
+
+.ql-glow-hover {
+  transition:
+    transform 0.35s var(--ql-ease),
+    box-shadow 0.45s var(--ql-ease),
+    border-color 0.35s ease;
+}
+
+.ql-glow-hover:hover {
+  box-shadow: 0 6px 24px rgba(180, 150, 90, 0.12);
+}
+
+/* QR: gentle breathe on the frame */
+.qr-code-container.ql-alive {
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+  animation: ql-frame-soft 6s ease-in-out infinite;
+}
+
+@keyframes ql-frame-soft {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    border-color: var(--border, #E8E8E5);
+  }
+  50% {
+    box-shadow: 0 6px 22px rgba(200, 170, 100, 0.14);
+    border-color: rgba(200, 180, 140, 0.45);
+  }
+}
+
+/* What's new — soft pulse once after load, then still */
+html.is-ready .whats-new-btn.ql-invite {
+  animation: ql-invite 2.8s var(--ql-ease) 1.1s both;
+}
+
+@keyframes ql-invite {
+  0% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+  40% {
+    box-shadow: 0 0 0 0 rgba(180, 150, 90, 0.22);
+  }
+  55% {
+    box-shadow: 0 0 0 10px rgba(180, 150, 90, 0);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Footer tagline — almost imperceptible breath */
+.site-footer-tagline.ql-breath {
+  animation: ql-text-breath 10s ease-in-out infinite;
+}
+
+@keyframes ql-text-breath {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 1; }
+}
+
+/* Header brand icon — tiny warm pulse */
+.site-brand-icon {
+  transition: box-shadow 0.4s ease, transform 0.4s var(--ql-ease);
+}
+
+.site-brand:hover .site-brand-icon {
+  box-shadow: 0 0 0 3px rgba(255, 240, 200, 0.55);
+  transform: scale(1.04);
+}
+
+/* Nav links — soft underline grow */
+.site-nav-link,
+.site-subnav-link {
+  position: relative;
+}
+
+/* Store badges: soft lift already exists; add warm filter hover */
+.app-store-link {
+  transition: transform 0.35s var(--ql-ease), filter 0.35s ease;
+}
+
+.app-store-link:hover {
+  filter: drop-shadow(0 8px 16px rgba(180, 150, 80, 0.18));
+}
+
+/* ── Reduced motion: stillness wins ── */
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow,
+  .ambient-mote,
+  .icon-aura::before,
+  .icon-aura::after,
+  .qr-code-container.ql-alive,
+  .whats-new-btn.ql-invite,
+  .site-footer-tagline.ql-breath {
+    animation: none !important;
+  }
+
+  .ambient-glow {
+    opacity: 0.55;
+    transform: none;
+  }
+
+  .ambient-mote {
+    display: none;
+  }
+
+  .icon-aura::before {
+    opacity: 0.5;
+  }
+
+  .ql-reveal,
+  html.is-ready .ql-reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .icon-aura:hover .app-icon,
+  .icon-aura:hover img,
+  .site-brand:hover .site-brand-icon {
+    transform: none;
+  }
+}

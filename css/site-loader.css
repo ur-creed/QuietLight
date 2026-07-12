@@ -11,6 +11,11 @@ html.is-ready #root > main {
   transition: opacity 0.75s ease 0.15s;
 }
 
+/* Soften the hard spinner: warm halo around the loader ring */
+.site-loader-ring {
+  box-shadow: 0 0 24px rgba(255, 240, 200, 0.35);
+}
+
 .site-loader {
   position: fixed;
   inset: 0;

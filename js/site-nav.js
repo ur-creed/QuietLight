@@ -212,5 +212,5 @@
   }
   footer.className = "site-footer";
   footer.innerHTML =
-    '<p class="site-footer-tagline">Stillness is already complete.</p>';
+    '<p class="site-footer-tagline ql-breath">Stillness is already complete.</p>';
 })();
