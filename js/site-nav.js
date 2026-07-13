@@ -204,6 +204,27 @@
   document.body.classList.add("has-site-header");
   initSupportPopover(header);
 
+  /* Keep body offset in sync with the real fixed header height (mobile stacks rows). */
+  var headerResizeTimer;
+  function syncHeaderOffset() {
+    var h = Math.ceil(header.getBoundingClientRect().height);
+    if (h > 0) {
+      document.documentElement.style.setProperty("--site-header-h", h + "px");
+    }
+  }
+  syncHeaderOffset();
+  window.addEventListener("resize", function () {
+    clearTimeout(headerResizeTimer);
+    headerResizeTimer = setTimeout(syncHeaderOffset, 50);
+  });
+  if (window.ResizeObserver) {
+    new ResizeObserver(syncHeaderOffset).observe(header);
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncHeaderOffset);
+  }
+  window.addEventListener("load", syncHeaderOffset);
+
   var main =
     document.querySelector("main") || document.querySelector("#root main");
   if (main && !main.id) {
