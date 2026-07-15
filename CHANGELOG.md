@@ -2,7 +2,19 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2 · Latest · July 11, 2026
+## 1.2.1 · Latest · July 14, 2026
+
+**Persona gate & conversation list**
+
+- **Paid persona stays selected** — Quiet Moon / Quiet Sun no longer reset to Quiet Light after a cold start
+- **New conversations appear right away** — creating a reflection adds it to your list immediately
+- **Conversation list refreshes on return** — recent threads stay in view when you come back
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2 · Release · July 11, 2026
 
 **Memory & continuity**
 
@@ -11,6 +23,8 @@ Newest first. [Full history on the site →](https://quietlight.app/changelog.ht
 - **Conversation archive & search** — search by title and themes; archive threads; filter by companion
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
+
+Updates since: 1.2.1
 
 ---
 
