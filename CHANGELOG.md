@@ -2,7 +2,19 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.1 · Latest · July 14, 2026
+## 1.2.2 · Latest · July 18, 2026
+
+**Honest free & premium limits**
+
+- **Clear free rhythm** — free and guest still have three reflections each day, said plainly
+- **Honest Premium** — deeper companions, memory, and a more generous daily rhythm (not unlimited)
+- **Aligned messages** — subscription screen, daily-limit prompts, and in-app copy agree on what each tier offers
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.1 · Update · July 14, 2026
 
 **Persona gate & conversation list**
 
@@ -24,7 +36,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.1
+Updates since: 1.2.2, 1.2.1
 
 ---
 
