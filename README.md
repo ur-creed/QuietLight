@@ -43,10 +43,21 @@ Static landing page for [quietlight.app](https://quietlight.app) — hosted on G
 | [`about.html`](about.html) | What Quiet Light is — and is not |
 | [`privacy.html`](privacy.html) | Privacy policy |
 | [`terms.html`](terms.html) | Terms of service |
-| [`pause.html`](pause.html) | A quiet place to sit for a moment |
+| [`pause.html`](pause.html) | A quiet place to sit for a moment (`noindex`) |
 | [`changelog.html`](changelog.html) | Updates — version history |
+| [`robots.txt`](robots.txt) | Crawl rules + sitemap pointer |
+| [`sitemap.xml`](sitemap.xml) | Indexable URLs for Search Console |
 
 App source lives separately at [quiet-light-illuminations](https://github.com/ur-creed/quiet-light-illuminations).
+
+### SEO notes
+
+- **Canonical host:** `https://quietlight.app` (apex). `www` should 301 → apex (GitHub Pages).
+- **Platforms:** Meta, schema, and copy say **iOS / App Store** only until Google Play ships.
+- **Structured data:** Organization + WebSite + SoftwareApplication on the homepage. No fabricated ratings.
+- **Share image:** `images/og-image.png` (1200×630). Favicon: `favicon-32.png`; in-page icon: `icon-256.png`.
+- **Search Console:** Submit `https://quietlight.app/sitemap.xml` after deploy.
+- When Android launches: update meta descriptions, JSON-LD `operatingSystem`, and sitemap `lastmod`.
 
 ## Changelog
 

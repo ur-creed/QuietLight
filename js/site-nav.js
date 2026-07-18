@@ -174,7 +174,7 @@
     '<div class="site-header-main">' +
     '<div class="site-header-inner">' +
     '<a href="index.html" class="site-brand" aria-label="Quiet Light home">' +
-    '<img src="images/icon.png" alt="" width="32" height="32" class="site-brand-icon" />' +
+    '<img src="images/icon-256.png" alt="" width="32" height="32" class="site-brand-icon" />' +
     "<span>Quiet Light</span></a>" +
     '<nav class="site-nav" aria-label="Main">' +
     buildNav(mainNav, "site-nav-link") +

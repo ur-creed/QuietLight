@@ -5,54 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  
   <!-- Essential SEO Meta Tags -->
-  <meta name="description" content="Quiet Light: Your AI companion for mindfulness and meditation. Download the award-winning mindfulness app on iOS and Android for inner peace and emotional wellness." />
-  <meta name="keywords" content="mindfulness app, meditation app, AI companion, wellness, emotional health, stress relief, guided meditation" />
+  <meta name="description" content="Quiet Light is a calm AI companion for mindfulness and meditation on iOS. Free daily reflections — warm, spacious presence without prescriptions or verdicts." />
+  <meta name="keywords" content="Quiet Light, mindfulness app, meditation app, AI companion, reflection app, wellness, emotional wellness, iOS" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#FAFAF7" />
   <meta name="author" content="Quiet Light" />
  
   <!-- Open Graph / Twitter Meta Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Quiet Light - AI Companion for Mindfulness" />
-  <meta property="og:description" content="Your AI companion for mindfulness and meditation. Experience inner peace with personalized guided sessions." />
-  <meta property="og:url" content="https://quietlight.app" />
-  <meta property="og:image" content="https://quietlight.app/images/icon.png" />
+  <meta property="og:title" content="Quiet Light — AI companion for mindfulness" />
+  <meta property="og:description" content="A calm AI companion for reflection and stillness. Free on the App Store — Android coming soon." />
+  <meta property="og:url" content="https://quietlight.app/" />
+  <meta property="og:image" content="https://quietlight.app/images/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="Quiet Light - AI Mindfulness App" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Quiet Light — AI companion for mindfulness and meditation" />
   <meta property="og:site_name" content="Quiet Light" />
+  <meta property="og:locale" content="en_US" />
  
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@QuietLightApp" />
-  <meta name="twitter:title" content="Quiet Light - AI Companion for Mindfulness" />
-  <meta name="twitter:description" content="Your AI companion for mindfulness and meditation. Download now on iOS and Android." />
-  <meta name="twitter:image" content="https://quietlight.app/images/icon.png" />
-  <meta name="twitter:image:alt" content="Quiet Light App Icon" />
+  <meta name="twitter:title" content="Quiet Light — AI companion for mindfulness" />
+  <meta name="twitter:description" content="A calm AI companion for reflection and stillness. Free on the App Store." />
+  <meta name="twitter:image" content="https://quietlight.app/images/og-image.png" />
+  <meta name="twitter:image:alt" content="Quiet Light — AI companion for mindfulness and meditation" />
  
   <link rel="canonical" href="https://quietlight.app/" />
  
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-  <link rel="apple-touch-icon" href="/images/icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="1024x1024" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
   <link rel="stylesheet" href="css/site-nav.css">
   <link rel="stylesheet" href="css/site-loader.css">
   <link rel="stylesheet" href="css/site-motion.css">
  
-  <title>Quiet Light - AI Companion for Mindfulness & Meditation App</title>
+  <title>Quiet Light — AI Companion for Mindfulness &amp; Meditation</title>
  
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Quiet Light",
-    "description": "An AI companion for mindfulness and meditation",
-    "url": "https://quietlight.app",
-    "image": "https://quietlight.app/images/icon.png",
-    "applicationCategory": "HealthAndFitnessApplication",
-    "operatingSystem": "iOS, Android",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250" }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://quietlight.app/#organization",
+        "name": "Quiet Light",
+        "url": "https://quietlight.app/",
+        "logo": "https://quietlight.app/images/icon-256.png",
+        "sameAs": [
+          "https://x.com/QuietLightApp",
+          "https://www.instagram.com/quietlightapp/",
+          "https://www.tiktok.com/@quietlightapp",
+          "https://dagazapps.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://quietlight.app/#website",
+        "url": "https://quietlight.app/",
+        "name": "Quiet Light",
+        "description": "A calm AI companion for mindfulness and meditation.",
+        "publisher": { "@id": "https://quietlight.app/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Quiet Light",
+        "alternateName": "Quiet Light Illuminations",
+        "description": "A calm AI companion for mindfulness and meditation — free daily reflections without prescriptions or verdicts.",
+        "url": "https://quietlight.app/",
+        "image": "https://quietlight.app/images/og-image.png",
+        "applicationCategory": "HealthAndFitnessApplication",
+        "operatingSystem": "iOS",
+        "downloadUrl": "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902",
+        "installUrl": "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": { "@id": "https://quietlight.app/#organization" }
+      }
+    ]
   }
   </script>
  
@@ -761,7 +797,7 @@
         <div class="content" id="content">
           <section class="hero" aria-label="Quiet Light">
             <div class="icon-aura ql-reveal ql-reveal--1">
-              <img src="images/icon.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
+              <img src="images/icon-256.png" alt="Quiet Light App Icon" class="app-icon" width="128" height="128" />
             </div>
             <h1 class="ql-reveal ql-reveal--2">Quiet Light</h1>
             <p class="tagline ql-reveal ql-reveal--3">Gentle presence for stillness</p>
