@@ -61,11 +61,13 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 
 ## Changelog
 
-**Current: v1.2.2** — newest first on the site; full history on the changelog page.
+**Current: v1.2.4** — newest first on the site; full history on the changelog page.
 
 | Version | Highlights |
 |---------|------------|
-| **1.2.2** (latest) | Honest free & premium daily limits; aligned paywall and limit copy |
+| **1.2.4** (latest) | Snappier journal drawer; Reduce Motion; app-specific accessibility overrides |
+| **1.2.3** | Journal drawer, cleaner reflection flow, Past Reflections polish |
+| **1.2.2** | Honest free & premium daily limits; aligned paywall and limit copy |
 | **1.2.1** | Paid persona stays selected; conversation list updates immediately |
 | **1.2** | Memory Garden, Threads of Light, archive & search, cloud-synced saves |
 | **1.1.1** | Saved reflections, shareable cards, About copy, stability |

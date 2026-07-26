@@ -2,7 +2,34 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.2 · Latest · July 18, 2026
+## 1.2.4 · Latest · July 24, 2026
+
+**Snappier drawer & accessibility**
+
+- **Journal drawer** — opens and closes more quickly, without the long spring bounce; swipe to open and swipe to close
+- **Reduce Motion** — applies to the drawer and primary press animations
+- **App-specific accessibility** — starts from your device defaults; anything you change in Quiet Light stays for the app and is not overwritten by system toggles
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.3 · Update · July 21, 2026
+
+**Journal drawer & reflection flow**
+
+- **Journal drawer** — side menu from the reflection screen for New Reflection, Choose Companion, Saved Reflections, Memory Garden, Settings, and recent past reflections
+- **Cleaner new reflections** — starting fresh or switching companions no longer leaves empty entries
+- **Past Reflections** — calmer list naming, empty states, and spacing
+- **Settings polish** — clearer layout for account, subscription, and practice preferences
+- **Companion presence** — refined typing indicator (respects Reduce Motion when enabled)
+- **Language** — more of the app speaks in reflections rather than conversations
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.2 · Update · July 18, 2026
 
 **Honest free & premium limits**
 
@@ -36,7 +63,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.2, 1.2.1
+Updates since: 1.2.4, 1.2.3, 1.2.2, 1.2.1
 
 ---
 
