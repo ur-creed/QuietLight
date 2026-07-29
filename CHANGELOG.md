@@ -2,7 +2,19 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.4 · Latest · July 24, 2026
+## 1.2.5 · Latest · July 26, 2026
+
+**Reliability for account email, Premium, and reflections**
+
+- **Account email** — more reliable password-reset and account messages
+- **Premium** — smoother subscribe and restore experience
+- **Stability** — reliability improvements for everyday reflections
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.4 · Update · July 24, 2026
 
 **Snappier drawer & accessibility**
 
@@ -63,7 +75,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.4, 1.2.3, 1.2.2, 1.2.1
+Updates since: 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
 
 ---
 
