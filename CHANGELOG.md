@@ -2,21 +2,7 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.6 · Latest · August 1, 2026
-
-**Account reliability, clearer Premium & wiser guidance**
-
-- **Saved reflections** — keepsakes stay with the correct account when more than one person uses the same device
-- **Premium messaging** — clearer feedback if a store purchase doesn’t unlock access yet (restore or check the store link)
-- **Premium reliability** — more consistent Premium UI after subscribe and restore
-- **Ancient knowledge while guiding** — companions try for one named teaching when truly guiding a reflection (at most two if both fit); plain presence for fluff, shallow check-ins, or crisis
-- **Reflection titles** — Past Reflections names a conversation from what you shared, instead of staying on “New Reflection”
-
-Part of **1.2 — Memory & continuity** ↓
-
----
-
-## 1.2.5 · Update · July 26, 2026
+## 1.2.5 · Latest · July 26, 2026
 
 **Reliability for account email, Premium, and reflections**
 
@@ -89,7 +75,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
+Updates since: 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
 
 ---
 

@@ -61,11 +61,12 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 
 ## Changelog
 
-**Current: v1.2.4** — newest first on the site; full history on the changelog page.
+**Current: v1.2.5** — newest first on the site; full history on the changelog page.
 
 | Version | Highlights |
 |---------|------------|
-| **1.2.4** (latest) | Snappier journal drawer; Reduce Motion; app-specific accessibility overrides |
+| **1.2.5** (latest) | Account email reliability, Premium subscribe/restore, reflection stability |
+| **1.2.4** | Snappier journal drawer; Reduce Motion; app-specific accessibility overrides |
 | **1.2.3** | Journal drawer, cleaner reflection flow, Past Reflections polish |
 | **1.2.2** | Honest free & premium daily limits; aligned paywall and limit copy |
 | **1.2.1** | Paid persona stays selected; conversation list updates immediately |
@@ -75,6 +76,10 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 | **1.0** | Initial App Store release — three presences, free & premium |
 
 [Full changelog →](changelog.html) · [CHANGELOG.md](CHANGELOG.md)
+
+### Site version policy
+
+Do **not** bump quietlight.app version numbers, “What’s new,” or the public changelog until the corresponding App Store release is **actually published** and the owner explicitly asks to update the site. App/repo version bumps and in-progress release notes stay in the app repo (or private notes) until then.
 
 <details>
 <summary><strong>What this is not</strong></summary>
