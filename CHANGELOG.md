@@ -4,11 +4,12 @@ Newest first. [Full history on the site →](https://quietlight.app/changelog.ht
 
 ## 1.2.6 · Latest · August 1, 2026
 
-**Account reliability on shared devices & clearer Premium**
+**Account reliability, clearer Premium & wiser guidance**
 
 - **Saved reflections** — keepsakes stay with the correct account when more than one person uses the same device
 - **Premium messaging** — clearer feedback if a store purchase doesn’t unlock access yet (restore or check the store link)
 - **Premium reliability** — more consistent Premium UI after subscribe and restore
+- **Ancient knowledge while guiding** — companions try for one named teaching when truly guiding a reflection (at most two if both fit); plain presence for fluff, shallow check-ins, or crisis
 
 Part of **1.2 — Memory & continuity** ↓
 
