@@ -10,6 +10,7 @@ Newest first. [Full history on the site →](https://quietlight.app/changelog.ht
 - **Premium messaging** — clearer feedback if a store purchase doesn’t unlock access yet (restore or check the store link)
 - **Premium reliability** — more consistent Premium UI after subscribe and restore
 - **Ancient knowledge while guiding** — companions try for one named teaching when truly guiding a reflection (at most two if both fit); plain presence for fluff, shallow check-ins, or crisis
+- **Reflection titles** — Past Reflections names a conversation from what you shared, instead of staying on “New Reflection”
 
 Part of **1.2 — Memory & continuity** ↓
 
