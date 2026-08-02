@@ -61,11 +61,12 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 
 ## Changelog
 
-**Current: v1.2.5** — newest first on the site; full history on the changelog page.
+**Current: v1.2.6** — newest first on the site; full history on the changelog page.
 
 | Version | Highlights |
 |---------|------------|
-| **1.2.5** (latest) | Account email reliability, Premium subscribe/restore, reflection stability |
+| **1.2.6** (latest) | Multi-account saves, clearer Premium, reflection titles, wiser guidance, Premium screen layout |
+| **1.2.5** | Account email reliability, Premium subscribe/restore, reflection stability |
 | **1.2.4** | Snappier journal drawer; Reduce Motion; app-specific accessibility overrides |
 | **1.2.3** | Journal drawer, cleaner reflection flow, Past Reflections polish |
 | **1.2.2** | Honest free & premium daily limits; aligned paywall and limit copy |
