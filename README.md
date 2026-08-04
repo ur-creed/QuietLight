@@ -43,6 +43,7 @@ Static landing page for [quietlight.app](https://quietlight.app) — hosted on G
 | [`about.html`](about.html) | What Quiet Light is — and is not |
 | [`privacy.html`](privacy.html) | Privacy policy |
 | [`terms.html`](terms.html) | Terms of service |
+| [`delete-account.html`](delete-account.html) | Public account/data deletion request (Google Play) |
 | [`pause.html`](pause.html) | A quiet place to sit for a moment (`noindex`) |
 | [`changelog.html`](changelog.html) | Updates — version history |
 | [`robots.txt`](robots.txt) | Crawl rules + sitemap pointer |
