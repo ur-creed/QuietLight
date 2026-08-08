@@ -12,9 +12,9 @@
   var subNav = [
     { href: "privacy.html", label: "Privacy" },
     { href: "terms.html", label: "Terms" },
-    { href: "delete-account.html", label: "Delete account" },
     { action: "support", label: "Support" },
     { href: "pause.html", label: "Pause" },
+    { href: "delete-account.html", label: "Delete account" },
   ];
 
   var socialSvg = {
