@@ -2,7 +2,21 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.6 · Latest · August 1, 2026
+## 1.2.7 · Latest · August 8, 2026
+
+**Android launch, web data deletion & Premium reliability**
+
+- **Android** — first Android store train; the same companion experience, with Google Play rollout underway
+- **Web data deletion** — public page at quietlight.app/delete-account.html, linked from the app (Google Play requirement)
+- **Privacy 1.0.1** — updated policy mentions the web deletion path; returning users re-accept when needed
+- **Premium reliability** — store access revoked when RevenueCat reports free; reviewer accounts protected for store review
+- **Platform awareness** — signup and last-seen platform (iOS / Android / web) for support and reliability
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.6 · Update · August 1, 2026
 
 **Account reliability, clearer Premium & wiser guidance**
 
@@ -90,7 +104,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
+Updates since: 1.2.7, 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
 
 ---
 
