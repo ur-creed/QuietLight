@@ -74,6 +74,20 @@
       font-size: 0.9rem;
       color: var(--text-secondary);
     }
+
+    .body a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s ease, opacity 0.25s ease;
+    }
+
+    .body a:hover,
+    .body a:focus-visible {
+      border-bottom-color: currentColor;
+      opacity: 0.9;
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -82,7 +96,8 @@
     <p class="code">404</p>
     <h1>This path has no answer</h1>
     <p class="body">
-      Only a gentle invitation to return — to stillness, to home, or to a quiet pause along the way.
+      Only a gentle invitation to return — to stillness, to home, or to a
+      <a href="pause.html">quiet pause</a> along the way.
     </p>
     <p class="hint">Use the menu above to find your way back.</p>
   </main>
