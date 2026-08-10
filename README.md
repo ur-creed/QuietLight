@@ -18,6 +18,8 @@
   &nbsp;·&nbsp;
   <a href="https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902">App Store</a>
   &nbsp;·&nbsp;
+  <a href="https://play.google.com/store/apps/details?id=com.dagazapps.quietlight">Google Play</a>
+  &nbsp;·&nbsp;
   <a href="about.html">About</a>
 </p>
 
@@ -54,19 +56,19 @@ App source lives separately at [quiet-light-illuminations](https://github.com/ur
 ### SEO notes
 
 - **Canonical host:** `https://quietlight.app` (apex). `www` should 301 → apex (GitHub Pages).
-- **Platforms:** Meta, schema, and copy say **iOS / App Store** only until Google Play ships.
-- **Structured data:** Organization + WebSite + SoftwareApplication on the homepage. No fabricated ratings.
+- **Platforms:** iOS (App Store) and Android (Google Play) — both live at **1.2.7**.
+- **Structured data:** Organization + WebSite + SoftwareApplication (iOS and Android) on the homepage. No fabricated ratings.
 - **Share image:** `images/og-image.png` (1200×630). Favicon: `favicon-32.png`; in-page icon: `icon-256.png`.
 - **Search Console:** Submit `https://quietlight.app/sitemap.xml` after deploy.
-- When Android launches: update meta descriptions, JSON-LD `operatingSystem`, and sitemap `lastmod`.
 
 ## Changelog
 
-**Current: v1.2.6** — newest first on the site; full history on the changelog page.
+**Current: v1.2.7** — newest first on the site; full history on the changelog page.
 
 | Version | Highlights |
 |---------|------------|
-| **1.2.6** (latest) | Multi-account saves, clearer Premium, reflection titles, wiser guidance, Premium screen layout |
+| **1.2.7** (latest) | Android on Google Play; web data deletion; Privacy 1.0.1; Premium reliability |
+| **1.2.6** | Multi-account saves, clearer Premium, reflection titles, wiser guidance, Premium screen layout |
 | **1.2.5** | Account email reliability, Premium subscribe/restore, reflection stability |
 | **1.2.4** | Snappier journal drawer; Reduce Motion; app-specific accessibility overrides |
 | **1.2.3** | Journal drawer, cleaner reflection flow, Past Reflections polish |

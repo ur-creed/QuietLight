@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  
   <!-- Essential SEO Meta Tags -->
-  <meta name="description" content="Quiet Light is a calm AI companion for mindfulness and meditation on iOS. Free daily reflections — warm, spacious presence without prescriptions or verdicts." />
-  <meta name="keywords" content="Quiet Light, mindfulness app, meditation app, AI companion, reflection app, wellness, emotional wellness, iOS" />
+  <meta name="description" content="Quiet Light is a calm AI companion for mindfulness and meditation on iOS and Android. Free daily reflections — warm, spacious presence without prescriptions or verdicts." />
+  <meta name="keywords" content="Quiet Light, mindfulness app, meditation app, AI companion, reflection app, wellness, emotional wellness, iOS, Android" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#FAFAF7" />
   <meta name="author" content="Quiet Light" />
@@ -14,7 +14,7 @@
   <!-- Open Graph / Twitter Meta Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Quiet Light — AI companion for mindfulness" />
-  <meta property="og:description" content="A calm AI companion for reflection and stillness. Free on the App Store — Android coming soon." />
+  <meta property="og:description" content="A calm AI companion for reflection and stillness. Free on the App Store and Google Play." />
   <meta property="og:url" content="https://quietlight.app/" />
   <meta property="og:image" content="https://quietlight.app/images/og-image.png" />
   <meta property="og:image:type" content="image/png" />
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@QuietLightApp" />
   <meta name="twitter:title" content="Quiet Light — AI companion for mindfulness" />
-  <meta name="twitter:description" content="A calm AI companion for reflection and stillness. Free on the App Store." />
+  <meta name="twitter:description" content="A calm AI companion for reflection and stillness. Free on the App Store and Google Play." />
   <meta name="twitter:image" content="https://quietlight.app/images/og-image.png" />
   <meta name="twitter:image:alt" content="Quiet Light — AI companion for mindfulness and meditation" />
  
@@ -81,6 +81,24 @@
         "operatingSystem": "iOS",
         "downloadUrl": "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902",
         "installUrl": "https://apps.apple.com/us/app/quiet-light-illuminations/id6759539902",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": { "@id": "https://quietlight.app/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Quiet Light",
+        "alternateName": "Quiet Light Illuminations",
+        "description": "A calm AI companion for mindfulness and meditation — free daily reflections without prescriptions or verdicts.",
+        "url": "https://quietlight.app/",
+        "image": "https://quietlight.app/images/og-image.png",
+        "applicationCategory": "HealthAndFitnessApplication",
+        "operatingSystem": "Android",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.dagazapps.quietlight",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.dagazapps.quietlight",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -297,40 +315,18 @@
       white-space: nowrap;
     }
 
-    .google-play-container {
-      position: relative;
+    .google-play-link {
+      display: block;
       width: 200px;
       height: 66px;
-      display: block;
       flex-shrink: 0;
+      line-height: 0;
     }
-    .google-play-container img {
+    .google-play-link img {
       width: 200px;
       height: 66px;
       object-fit: contain;
       display: block;
-    }
-    .coming-soon-badge {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(250, 250, 247, 0.75);
-      backdrop-filter: blur(1px);
-      z-index: 10;
-      border-radius: 12px;
-    }
-    .coming-soon-text {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #1A1A1A;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transform: rotate(-6deg);
-      padding: 5px 12px;
-      border: 3px solid #1A1A1A;
-      border-radius: 6px;
     }
 
     /* ── Meta ── */
@@ -660,8 +656,8 @@
       }
 
       .app-store-link img,
-      .google-play-container,
-      .google-play-container img {
+      .google-play-link,
+      .google-play-link img {
         width: 180px;
         height: 60px;
       }
@@ -743,8 +739,8 @@
       }
 
       .app-store-link img,
-      .google-play-container,
-      .google-play-container img {
+      .google-play-link,
+      .google-play-link img {
         width: 160px;
         height: 53px;
       }
@@ -830,14 +826,14 @@
               </div>
 
               <div class="store-android">
-                <div class="google-play-container">
+                <a href="https://play.google.com/store/apps/details?id=com.dagazapps.quietlight"
+                   class="google-play-link"
+                   target="_blank"
+                   rel="noopener noreferrer">
                   <img src="images/GooglePlayBadge.svg"
                        alt="Get it on Google Play"
                        width="200" height="66" />
-                  <div class="coming-soon-badge">
-                    <div class="coming-soon-text">Coming Soon</div>
-                  </div>
-                </div>
+                </a>
               </div>
             </div>
           </section>
@@ -867,7 +863,7 @@
       <ul class="whats-new-list">
         <li>
           <strong>Android</strong>
-          First Android store train — the same calm companion experience, with Google Play rollout underway.
+          Now on Google Play — the same calm companion experience on iOS and Android.
         </li>
         <li>
           <strong>Account &amp; data deletion</strong>

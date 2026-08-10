@@ -6,7 +6,7 @@ Newest first. [Full history on the site →](https://quietlight.app/changelog.ht
 
 **Android launch, web data deletion & Premium reliability**
 
-- **Android** — first Android store train; the same companion experience, with Google Play rollout underway
+- **Android** — now on [Google Play](https://play.google.com/store/apps/details?id=com.dagazapps.quietlight); the same companion experience on iOS and Android
 - **Web data deletion** — public page at quietlight.app/delete-account.html, linked from the app (Google Play requirement)
 - **Privacy 1.0.1** — updated policy mentions the web deletion path; returning users re-accept when needed
 - **Premium reliability** — store access revoked when RevenueCat reports free; reviewer accounts protected for store review
