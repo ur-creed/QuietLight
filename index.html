@@ -240,10 +240,9 @@
 
     /*
      * Store layout (mobile-first):
-     *   [App Store]
-     *   [QR + label]
-     *   [Google Play]
-     * Desktop: two columns — iOS (badge + QR) | Android (badge top-aligned)
+     *   [App Store] + [QR]
+     *   [Google Play] + [QR]
+     * Desktop: two columns — iOS (badge + QR) | Android (badge + QR)
      */
     .store-buttons {
       display: flex;
@@ -252,17 +251,12 @@
       gap: 22px;
     }
 
-    .store-ios {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-
+    .store-ios,
     .store-android {
       display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 16px;
     }
 
     .app-store-link {
@@ -565,8 +559,8 @@
 
     /*
      * Desktop (≥768px): one viewport, no page scroll.
-     * iOS column keeps badge + QR stacked (QR never sits beside the badge).
-     * Android badge sits beside the iOS column, top-aligned with the App Store badge.
+     * Each store column stacks badge + QR (QR never sits beside its badge).
+     * Android column sits beside the iOS column, top-aligned.
      */
     @media (min-width: 768px) {
       html {
@@ -651,7 +645,8 @@
         gap: 32px;
       }
 
-      .store-ios {
+      .store-ios,
+      .store-android {
         gap: 14px;
       }
 
@@ -734,7 +729,8 @@
         gap: 28px;
       }
 
-      .store-ios {
+      .store-ios,
+      .store-android {
         gap: 10px;
       }
 
@@ -834,6 +830,14 @@
                        alt="Get it on Google Play"
                        width="200" height="66" />
                 </a>
+
+                <figure class="qr">
+                  <img src="images/qr-code-android.png"
+                       alt="QR code to download Quiet Light on Google Play"
+                       width="128" height="128"
+                       decoding="async" />
+                  <figcaption>Scan to download</figcaption>
+                </figure>
               </div>
             </div>
           </section>
