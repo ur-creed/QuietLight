@@ -2,7 +2,20 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.7 · Latest · August 8, 2026
+## 1.2.8 · Latest · August 27, 2026
+
+**Local-day rhythm, deep-work room & clearer titles**
+
+- **Your day** — daily reflections follow your local calendar; evenings stay tonight, and travel or VPN hops cannot refill the day
+- **Room for deep work (Premium)** — at today’s cap, genuine deep work may open +3 reflections (up to 15), marked with a quiet moment
+- **Past Reflections** — clean, poetic titles beside the companion color; no stray markdown #
+- **Companion emphasis** — words wrapped in *asterisks* now appear in bold
+
+Part of **1.2 — Memory & continuity** ↓
+
+---
+
+## 1.2.7 · Update · August 8, 2026
 
 **Android launch, web data deletion & Premium reliability**
 
@@ -104,7 +117,7 @@ Part of **1.2 — Memory & continuity** ↓
 - **Cloud-synced saved reflections** — your keepsake library across devices
 - **Free-tier polish** — search & sort saved reflections, share card styles, reminder opens today's reflection, same-day continuity
 
-Updates since: 1.2.7, 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
+Updates since: 1.2.8, 1.2.7, 1.2.6, 1.2.5, 1.2.4, 1.2.3, 1.2.2, 1.2.1
 
 ---
 
