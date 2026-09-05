@@ -2,7 +2,22 @@
 
 Newest first. [Full history on the site →](https://quietlight.app/changelog.html)
 
-## 1.2.8 · Latest · August 27, 2026
+## 1.3.0 · Latest · September 5, 2026
+
+**Companion depth, visiting memory & quieter journal**
+
+- **Companions** — Light, Sun, and Moon each hold a more distinct quality of presence
+- **Visiting memory (Premium)** — a few invitational phrases return in the reflection; Memory Garden lets you begin from a phrase or let one go
+- **Threads of Light** — follows your local week, with a quiet letter-ready signal
+- **Today’s Light** — on the empty page; long-press to share as a Light, Dark, or Warm card
+- **The journal** — New Reflection stays empty after you leave; opening a past thread brings its companion; the drawer greets you by name
+- **Across devices** — signed-in reflections stay with your account; landscape is welcome
+
+Part of **1.3 — Companion depth** ↓
+
+---
+
+## 1.2.8 · Update · August 27, 2026
 
 **Local-day rhythm, deep-work room & clearer titles**
 
