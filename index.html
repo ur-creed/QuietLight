@@ -6,7 +6,7 @@
  
   <!-- Essential SEO Meta Tags -->
   <meta name="description" content="Quiet Light is a calm AI companion for mindfulness and meditation on iOS and Android. Free daily reflections — warm, spacious presence without prescriptions or verdicts." />
-  <meta name="keywords" content="Quiet Light, mindfulness app, meditation app, AI companion, reflection app, wellness, emotional wellness, iOS, Android" />
+  <meta name="keywords" content="Quiet Light, mindfulness app, meditation app, AI companion, reflection app, stillness, iOS, Android" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#FAFAF7" />
   <meta name="author" content="Quiet Light" />
@@ -52,6 +52,7 @@
         "@type": "Organization",
         "@id": "https://quietlight.app/#organization",
         "name": "Quiet Light",
+        "legalName": "Dagaz Apps LLC",
         "url": "https://quietlight.app/",
         "logo": "https://quietlight.app/images/icon-256.png",
         "sameAs": [
@@ -590,8 +591,23 @@
       }
 
       body.page-home .site-footer {
-        padding: 10px 20px;
+        padding: 8px 20px 10px;
         flex-shrink: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px 16px;
+        max-width: 960px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+      }
+
+      body.page-home .site-footer-legal {
+        margin: 0;
       }
 
       .wrapper {
@@ -794,7 +810,7 @@
             <h1 class="ql-reveal ql-reveal--2">Quiet Light</h1>
             <p class="tagline ql-reveal ql-reveal--3">Gentle presence for stillness</p>
             <p class="lede ql-reveal ql-reveal--3">
-              A calm AI companion for reflection — warm, spacious, and free of prescriptions or verdicts.
+              A calm AI companion for reflection — warm, spacious, and free of prescriptions or verdicts. Not therapy, not a medical device, and not a substitute for professional care.
             </p>
           </section>
 

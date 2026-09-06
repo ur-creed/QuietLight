@@ -14,6 +14,7 @@
   var subNav = [
     { href: "privacy.html", label: "Privacy" },
     { href: "terms.html", label: "Terms" },
+    { href: "disclaimer.html", label: "Disclaimer" },
     { action: "support", label: "Support" },
     { href: "delete-account.html", label: "Delete account" },
   ];
@@ -239,6 +240,18 @@
     document.body.appendChild(footer);
   }
   footer.className = "site-footer";
+  var year = new Date().getFullYear();
   footer.innerHTML =
-    '<p class="site-footer-tagline ql-breath">Stillness is already complete.</p>';
+    '<p class="site-footer-tagline ql-breath">Stillness is already complete.</p>' +
+    '<nav class="site-footer-legal" aria-label="Legal">' +
+    '<a href="privacy.html">Privacy</a>' +
+    '<span aria-hidden="true">·</span>' +
+    '<a href="terms.html">Terms</a>' +
+    '<span aria-hidden="true">·</span>' +
+    '<a href="disclaimer.html">Disclaimer</a>' +
+    '<span aria-hidden="true">·</span>' +
+    '<span class="site-footer-copy">© ' +
+    year +
+    " Dagaz Apps LLC</span>" +
+    "</nav>";
 })();

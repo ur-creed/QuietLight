@@ -1,0 +1,38 @@
+/* Shared extras for Privacy, Terms, Disclaimer */
+
+.legal-callout {
+  margin: 0 0 var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--background-secondary);
+}
+
+.legal-callout p {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.legal-callout p + p {
+  margin-top: 0.75rem;
+}
+
+.legal-caps {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.legal-meta {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-lg);
+}
+
+.subheading {
+  font-size: 1.12rem;
+  font-weight: 500;
+  margin: var(--spacing-sm) 0 var(--spacing-xs);
+  color: var(--text);
+}
